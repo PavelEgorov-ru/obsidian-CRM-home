@@ -1,0 +1,932 @@
+<!doctype html>
+<html ⚡4email data-css-strict lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-element="amp-anim" src="https://cdn.ampproject.org/v0/amp-anim-0.1.js"></script>
+  <script custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js" async></script>
+  <script custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js" async></script>
+  <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+  <style amp4email-boilerplate>
+    body {
+      visibility: hidden
+    }
+  </style>
+  <style amp-custom>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .body {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+      color: #212121;
+      background-color: #f5f5f5;
+    }
+
+    .body__container {
+      max-width: 600px;
+      margin: auto;
+      background-color: #f5f5f5;
+    }
+
+    .preheader {
+      padding: 4px 16px;
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      line-height: 13px;
+      color: #9e9e9e;
+      background-color: #212121;
+    }
+
+    /* блок меню начало */
+    .menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 60px;
+      padding: 16px 16px 16px;
+      font-family: Arial, sans-serif;
+      background-color: #3a3a3b;
+    }
+
+    .menu__list {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      line-height: 20px;
+      list-style: none;
+    }
+
+    .menu__link {
+      text-decoration: none;
+      color: #ffffff;
+    }
+
+    .menu__link:hover {
+      color: #646363;
+    }
+
+    /* блок меню конец */
+
+
+    /* блок с контентом начало */
+    .content {
+      margin-top: 8px;
+      padding-bottom: 40px;
+      font-family: Arial, sans-serif;
+      color: #212121;
+      background-color: #ffffff;
+    }
+
+    .content__text {
+      padding: 24px 16px 24px;
+      text-align: center;
+      font-size: 18px;
+      line-height: 26px;
+      color: #212121
+    }
+
+    /* .content_wish-list {
+      border: 1px solid red;
+
+    } */
+
+    .form280 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      padding-bottom: 12px;
+      width: 280px;
+      border: 0px solid black;
+
+    }
+
+    .form280__img {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .form280__buttons {
+      display: flex;
+      gap: 4px;
+    }
+
+    .form280__buttons_error {
+      width: 136px;
+      height: 40px;
+      padding: 8px 8px;
+      font-size: 14px;
+      line-height: 18px;
+      text-align: center;
+      background-color: rgb(230, 109, 53);
+      color: #ffffff;
+      border-radius: 4px;
+    }
+
+    .form280__buttons_success {
+      width: 136px;
+      height: 40px;
+      padding: 8px 8px;
+      font-size: 14px;
+      line-height: 18px;
+      text-align: center;
+      background-color: #09ab8b;
+      color: #ffffff;
+      border-radius: 4px;
+    }
+
+    button {
+      width: 136px;
+      padding: 8px 8px;
+      font-size: 14px;
+      line-height: 18px;
+      background-color: #9e9e9e;
+      color: #ffffff;
+      border: 0px solid #ffffff;
+      border-radius: 4px;
+    }
+
+    .form184__counts {
+      width: 136px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .form184 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      padding-bottom: 12px;
+      width: 280px;
+      border: 0px solid black;
+
+    }
+
+    .form184__img {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .form184__buttons {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 4px;
+    }
+
+    .form184__buttons_error {
+      width: 136px;
+      height: 40px;
+      padding: 8px 8px;
+      font-size: 14px;
+      line-height: 18px;
+      text-align: center;
+      background-color: rgb(230, 109, 53);
+      color: #ffffff;
+      border-radius: 4px;
+    }
+
+    .form184__buttons_success {
+      width: 136px;
+      height: 40px;
+      padding: 8px 8px;
+      font-size: 14px;
+      line-height: 18px;
+      text-align: center;
+      background-color: #09ab8b;
+      color: #ffffff;
+      border-radius: 4px;
+    }
+
+    .form280__counts {
+      width: 136px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .form184__counts {
+      width: 136px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .ink {
+      flex-grow: 1;
+      padding: 8px 8px;
+      cursor: pointer;
+      text-align: center;
+      background-color: #ebebeb;
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+    }
+
+    .ink:hover {
+      background-color: #cacaca;
+    }
+
+    .ink-error {
+      flex-grow: 1;
+      padding: 8px 8px;
+      text-align: center;
+      background-color: #9e9e9e;
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+    }
+
+    .counter {
+      text-align: center;
+      padding: 8px 8px;
+      flex-grow: 1;
+      background-color: #ebebeb;
+      color: #212121;
+    }
+
+    .dec {
+      padding: 8px 8px;
+      flex-grow: 1;
+      text-align: center;
+      background-color: #ebebeb;
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+    }
+
+    .dec:hover {
+      background-color: #cacaca;
+    }
+
+    .dec-error {
+      padding: 8px 8px;
+      flex-grow: 1;
+      text-align: center;
+      background-color: #9e9e9e;
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+    }
+
+    .button-active {
+      background-color: #1f84db;
+      color: #ffffff;
+      cursor: pointer;
+    }
+
+    .button-active:hover {
+      background-color: #1b75c2;
+    }
+
+    .button-disable {
+      background-color: #9e9e9e;
+      color: #ffffff;
+    }
+
+    .button-errors {
+      background-color: #9e9e9e;
+    }
+
+    .success-form280 {
+      background-color: #09ab8b;
+    }
+
+    .errors-form280 {
+      background-color: rgb(230, 109, 53);
+    }
+
+
+
+    /* блок с контентом конец */
+
+
+    /* блок с категорией начало */
+    .category {
+      margin-top: 8px;
+      margin-bottom: 4px;
+      padding: 12px 16px 20px 16px;
+      font-family: Arial, sans-serif;
+      background-color: #fafafa
+    }
+
+    .category__cards {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 12px 0;
+    }
+
+    .category__card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .category__img {
+      height: 80px;
+      margin-bottom: 4px;
+      border-radius: 8px;
+      transition: opacity ease 0.3s;
+    }
+
+    .category__img:hover {
+      opacity: 0.9;
+    }
+
+    .category__text {
+      font-size: 12px;
+      line-height: 18px;
+      color: #9e9e9e;
+      transition: opacity ease 0.3s;
+    }
+
+    .category__text:hover {
+      opacity: 0.9;
+    }
+
+    /* блок с категорией конец */
+
+    /* блок полезные разделы сайта начало */
+    .site-sections {
+      margin-top: 8px;
+    }
+
+    .site-sections {
+      margin-top: 8px;
+      padding: 12px 16px 20px 16px;
+      font-family: Arial, sans-serif;
+      background-color: #fafafa;
+    }
+
+
+    .site-sections__title {
+      margin-bottom: 8px;
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: bold;
+      color: #212121;
+    }
+
+    .site-sections__lists {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .site-sections__list {
+      list-style: none;
+    }
+
+    .site-sections__list li {
+      padding-bottom: 8px;
+    }
+
+    .site-sections__link {
+      font-size: 14px;
+      line-height: 20px;
+      color: #9e9e9e;
+      transition: opacity ease 0.3s;
+    }
+
+    .site-sections__link:hover {
+      opacity: 0.9;
+    }
+
+    /* блок полезные разделы сайта конец */
+
+    /* блок с социальными сетями начало */
+    .social-network {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      margin-top: 8px;
+      margin-bottom: 4px;
+      padding: 20px 16px 20px 16px;
+      font-family: Arial, sans-serif;
+      background-color: #fafafa;
+    }
+
+    .social-network__links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .social-network__link {
+      width: 45px;
+      height: 45px;
+      text-decoration: none;
+      border-radius: 100%;
+      transition: opacity ease 0.3s;
+    }
+
+    .social-network__link:hover {
+      opacity: 0.9;
+    }
+
+    .social-network__images {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .social-network__img {
+      width: 132px;
+      height: 40px;
+      text-decoration: none;
+      border-radius: 6px;
+      border: 2px solid #ffffff;
+    }
+
+    /* блок с социальными сетями конец */
+
+
+    /* блок с подвалом начало */
+    .footer {
+      padding: 12px 16px;
+      font-family: Arial, sans-serif;
+      background-color: #EBEBEB;
+    }
+
+    .footer__text {
+      font-size: 12px;
+      line-height: 16px;
+      color: #9e9e9e;
+    }
+
+    .footer__text:last-child {
+      padding-top: 12px;
+    }
+
+    .footer__link {
+      color: #9e9e9e;
+    }
+
+
+    .subscribe {
+      padding: 12px 16px;
+      font-family: Arial, sans-serif;
+      background-color: #3A3A3B;
+    }
+
+    .subscribe__text {
+      font-size: 12px;
+      line-height: 16px;
+      color: #ffffff;
+    }
+
+    .subscribe__link {
+      color: #ffffff;
+    }
+
+    /* блок с подвалом конец */
+
+    @media screen and (max-width: 440px) {
+
+      .category__cards {
+        align-items: start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <amp-state id="state">
+    <script type="application/json">
+      {
+        "succes": false,
+        "error": false
+      }
+    </script>
+  </amp-state>
+  <div class="body">
+    <div class="body__container">
+      <div class="header">
+        <p class="preheader">
+          Вас приветствует интернет-магазин Сима-ленд
+        </p>
+        <div class="menu">
+          <a href="https://www.sima-land.ru/?utm_source=email&utm_medium=adv_hand&utm_campaign=000033032-our-amp_prazdniki_roz"
+            target="_blank">
+            <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/template/design2020/gold23.png"
+              width="113" height="45" alt="">
+            </amp-img>
+          </a>
+          <ul class="menu__list">
+            <li>
+              <a class="menu__link"
+                href="https://www.sima-land.ru/offer/?utm_source=email&utm_medium=adv_hand&utm_campaign=000033032-our-amp_prazdniki_roz"
+                target="_blank">
+                Акции
+              </a>
+            </li>
+            <li>
+              <a class="menu__link"
+                href="https://www.sima-land.ru/sale/?utm_source=email&utm_medium=adv_hand&utm_campaign=000033032-our-amp_prazdniki_roz"
+                target="_blank">
+                Скидки
+              </a>
+            </li>
+            <li>
+              <a class="menu__link"
+                href="https://www.sima-land.ru/hit/?utm_source=email&utm_medium=adv_hand&utm_campaign=000033032-our-amp_prazdniki_roz"
+                target="_blank">
+                Хиты продаж
+              </a>
+            </li>
+            <li>
+              <a class="menu__link"
+                href="https://www.sima-land.ru/new/?utm_source=email&utm_medium=adv_hand&utm_campaign=000033032-our-amp_prazdniki_roz"
+                target="_blank">
+                Новинки
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="main">
+        <div class="content">
+          <amp-anim width="600" height="216" src="https://email-images.mindbox.ru/665173/4678426/10.gif"
+            layout="responsive">
+          </amp-anim>
+          <p class="content__text">
+            Товар, который вас заинтересовал, вновь появился на&nbsp;сайте.
+            Успевайте заказать!
+          </p>
+          @{set card = ""}
+          @{set card = Product.Name}
+          <div class="content_wish-list">
+            <form method="post" action-xhr="https://www.sima-land.ru/iapi/amp-cart/"
+              on="submit-success: AMP.setState({success${Product.IDs.WebsiteIdSimaLand}: true}); submit-error: AMP.setState({error${Product.IDs.WebsiteIdSimaLand}: true})">
+              <fieldset class="form280">
+                <div class="form280__img">
+                  <a href="${ Product.Url }" target="_blank">
+                    <amp-img src="${ Product.AdditionalData.Pic280 }" height="280" width="280" alt="${Product.Name}"
+                      layout="fixed">
+                    </amp-img>
+                  </a>
+                  <a href="${ Product.Url }" target="_blank">
+                    <p class="form280__text">${truncate(Product.Name, 33)}</p>
+                  </a>
+                  <p class="form280__price">${ formatDecimal(floor(Product.Price), "N0")}@{ if formatDecimal(floor((100
+                    *
+                    Product.Price - 100 * floor(Product.Price))), '00') != '00' },${
+                    formatDecimal(floor((100 * Product.Price - 100 * floor(Product.Price))), '00') }
+                    @{end if } <s>Р</s></p>
+                </div>
+                <input type="hidden" name="email" hidden value="${Recipient.Email}">
+                <input type="hidden" name="item_sid" hidden value="6947261">
+                <input type="hidden" name="qty" hidden [value]="counter${Product.IDs.WebsiteIdSimaLand}">
+                <input type="hidden" name="timestamp" hidden value="${ToUnixTimeStamp(Message.SendingDateTime)}">
+                @{set key =
+                MD5("JmtJGmkz-wx5Dho06-KuO4ZeDw-wqyhQ0PO"&Recipient.Email&ToUnixTimeStamp(Message.SendingDateTime))}
+                <input type="hidden" name="key" hidden value="${ToLower(key)}">
+                <div class="form280__buttons"
+                  [hidden]="error${Product.IDs.WebsiteIdSimaLand} || success${Product.IDs.WebsiteIdSimaLand}">
+                  <button type="submit" disabled
+                    [disabled]="(counter${Product.IDs.WebsiteIdSimaLand} > 0 ? false : true) || (success${Product.IDs.WebsiteIdSimaLand} ? true : false) || (error${Product.IDs.WebsiteIdSimaLand} ? true : false)"
+                    [class]="(counter${Product.IDs.WebsiteIdSimaLand} > 0 ? 'button-active' : 'button-disable')">
+                    В корзину
+                  </button>
+                  <div class="form280__counts">
+                    <div class="ink" [class]="error${Product.IDs.WebsiteIdSimaLand} ? 'ink-error' : false"
+                      on="tap:AMP.setState({counter${Product.IDs.WebsiteIdSimaLand}: error ? counter${Product.IDs.WebsiteIdSimaLand} : counter${Product.IDs.WebsiteIdSimaLand} + 1})"
+                      role="button" tabindex="1">
+                      <p>+</p>
+                    </div>
+                    <p class="counter"
+                      [class]="error${Product.IDs.WebsiteIdSimaLand} ? 'counter button-disable' : false"
+                      [text]="counter${Product.IDs.WebsiteIdSimaLand} ? counter${Product.IDs.WebsiteIdSimaLand} : 0">0
+                    </p>
+                    <div class="dec" [class]="error${Product.IDs.WebsiteIdSimaLand} ? 'dec-error' : false"
+                      on="tap:AMP.setState({counter${Product.IDs.WebsiteIdSimaLand}: counter${Product.IDs.WebsiteIdSimaLand} > 0 || error${Product.IDs.WebsiteIdSimaLand} == false ? counter${Product.IDs.WebsiteIdSimaLand} - 1 : 0})"
+                      role="button" tabindex="2">
+                      <p>-</p>
+                    </div>
+                  </div>
+                </div>
+                <div submit-success>
+                  <div class="form280__buttons_success">
+                    Успешно
+                  </div>
+                </div>
+                <div submit-error>
+                  <div class="form280__buttons_error">
+                    Ошибка
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+            <p class="content__text"> другиет товары из листа ожидания</p>
+            <amp-carousel height="500" layout="fixed-height" type="carousel" role="region"
+              aria-label="Carousel with slide previews" controls autoplay>
+
+              @{ for item in Recipient.GetProductList("TovarSnovaVNalichii").Take(25)}
+              @{if item.Product.Name != card&""}
+              <form method="post" action-xhr="https://www.sima-land.ru/iapi/amp-cart/"
+                on="submit-success: AMP.setState({success${item.Product.IDs.WebsiteIdSimaLand}: true}); submit-error: AMP.setState({error${item.Product.IDs.WebsiteIdSimaLand}: true})">
+                <fieldset class="form184">
+                  <div class="form184__img">
+                    <a href="${ item.Product.Url }" target="_blank">
+                      <amp-img src="https://goods-photos.static1-sima-land.com/items/2792925/0/280.jpg" height="184"
+                        width="184" alt="${item.Product.Name}" layout="fixed">
+                      </amp-img>
+                    </a>
+                    <a href="${ item.Product.Url }" target="_blank">
+                      <p class="form184__text">${truncate(item.Product.Name, 33)}</p>
+                    </a>
+
+                    <p class="form184__price">${ formatDecimal(floor(item.Product.Price), "N0")}@{ if
+                      formatDecimal(floor((100
+                      *
+                      item.Product.Price - 100 * floor(item.Product.Price))), '00') != '00' },${
+                      formatDecimal(floor((100 * item.Product.Price - 100 * floor(item.Product.Price))), '00') }
+                      @{end if } <s>Р</s></p>
+                  </div>
+                  <input type="hidden" name="email" hidden value="${Recipient.Email}">
+                  <input type="hidden" name="item_sid" hidden value="${Product.IDs.WebsiteIdSimaLand}">
+                  <input type="hidden" name="qty" hidden [value]="counter${Product.IDs.WebsiteIdSimaLand}">
+                  <input type="hidden" name="timestamp" hidden value="${ToUnixTimeStamp(Message.SendingDateTime)}">
+                  @{set key =
+                  MD5("JmtJGmkz-wx5Dho06-KuO4ZeDw-wqyhQ0PO"&Recipient.Email&ToUnixTimeStamp(Message.SendingDateTime))}
+                  <input type="hidden" name="key" hidden value="${ToLower(key)}">
+                  <div class="form184__buttons"
+                    [hidden]="error${item.Product.IDs.WebsiteIdSimaLand} || success${item.Product.IDs.WebsiteIdSimaLand}">
+                    <button type="submit" disabled
+                      [disabled]="(counter${item.Product.IDs.WebsiteIdSimaLand} > 0 ? false : true) || (success${item.Product.IDs.WebsiteIdSimaLand} ? true : false) || (error${item.Product.IDs.WebsiteIdSimaLand} ? true : false)"
+                      [class]="(counter${item.Product.IDs.WebsiteIdSimaLand} > 0 ? 'button-active' : 'button-disable')">
+                      В корзину
+                    </button>
+                    <div class="form184__counts">
+                      <div class="ink" [class]="error${item.Product.IDs.WebsiteIdSimaLand} ? 'ink-error' : false"
+                        on="tap:AMP.setState({counter${item.Product.IDs.WebsiteIdSimaLand}: error ? counter${item.Product.IDs.WebsiteIdSimaLand} : counter${item.Product.IDs.WebsiteIdSimaLand} + 1})"
+                        role="button" tabindex="1">
+                        <p>+</p>
+                      </div>
+                      <p class="counter"
+                        [class]="error${item.Product.IDs.WebsiteIdSimaLand} ? 'counter button-disable' : false"
+                        [text]="counter${item.Product.IDs.WebsiteIdSimaLand} ? counter${item.Product.IDs.WebsiteIdSimaLand} : 0">
+                        0</p>
+                      <div class="dec" [class]="error${item.Product.IDs.WebsiteIdSimaLand} ? 'dec-error' : false"
+                        on="tap:AMP.setState({counter${item.Product.IDs.WebsiteIdSimaLand}: counter${item.Product.IDs.WebsiteIdSimaLand} > 0 || error${item.Product.IDs.WebsiteIdSimaLand} == false ? counter${item.Product.IDs.WebsiteIdSimaLand} - 1 : 0})"
+                        role="button" tabindex="2">
+                        <p>-</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div submit-success>
+                    <div class="form184__buttons_success">
+                      Успешно
+                    </div>
+                  </div>
+                  <div submit-error>
+                    <div class="form184__buttons_error">
+                      Ошибка
+                    </div>
+                  </div>
+                </fieldset>
+              </form>
+              @{end if}
+              @{ end for }
+            </amp-carousel>
+          </div>
+        </div>
+        <div class="category">
+          <div class="category__cards">
+            <div class="category__card">
+              <a class="category__img"
+                href="https://www.sima-land.ru/zimnie-tovary/?utm_source=email&utm_medium=adv_hand&utm_campaign=000033032-our-amp_prazdniki_roz"
+                title="Зимние товары" target="_blank">
+                <amp-img width="80" height="80" layout="fixed" alt="Зимние товары"
+                  src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032877/15.png"></amp-img>
+              </a>
+              <a class="category__text"
+                href="https://www.sima-land.ru/zimnie-tovary/?utm_source=email&utm_medium=adv_hand&utm_campaign=000033032-our-amp_prazdniki_roz"
+                title="Зимние товары" target="_blank">
+                Зимние <br> товары
+              </a>
+            </div>
+            <div class="category__card">
+              <a class="category__img"
+                href="https://www.sima-land.ru/podarki-na-14-fevralya/?utm_source=email&utm_medium=adv_hand&utm_campaign=000033032-our-amp_prazdniki_roz"
+                title="Товары к 14 Февраля" target="_blank">
+                <amp-img width="80" height="80" layout="fixed" alt="Товары к 14 Февраля"
+                  src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032877/16.png"></amp-img>
+              </a>
+              <a class="category__text"
+                href="https://www.sima-land.ru/podarki-na-14-fevralya/?utm_source=email&utm_medium=adv_hand&utm_campaign=000033032-our-amp_prazdniki_roz"
+                title="Товары к 14 Февраля" target="_blank">
+                Товары <br> к 14 Февраля
+              </a>
+            </div>
+            <div class="category__card">
+              <a class="category__img"
+                href="https://www.sima-land.ru/podarki-na-23-fevralya/?utm_source=email&utm_medium=adv_hand&utm_campaign=000033032-our-amp_prazdniki_roz"
+                title="Товары к 23 Февраля" target="_blank">
+                <amp-img width="80" height="80" layout="fixed" alt="Товары к 23 Февраля"
+                  src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032877/17.png"></amp-img>
+              </a>
+              <a class="category__text"
+                href="https://www.sima-land.ru/podarki-na-23-fevralya/?utm_source=email&utm_medium=adv_hand&utm_campaign=000033032-our-amp_prazdniki_roz"
+                title="Товары к 23 Февраля" target="_blank">
+                Товары <br> к 23 Февраля
+              </a>
+            </div>
+            <div class="category__card">
+              <a class="category__img"
+                href="https://www.sima-land.ru/podarki-k-8-marta/?utm_source=email&utm_medium=adv_hand&utm_campaign=000033032-our-amp_prazdniki_roz"
+                title="Товары к 8 Марта" target="_blank">
+                <amp-img width="80" height="80" layout="fixed" alt="Товары к 8 Марта"
+                  src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032877/18.png"></amp-img>
+              </a>
+              <a class="category__text"
+                href="https://www.sima-land.ru/podarki-k-8-marta/?utm_source=email&utm_medium=adv_hand&utm_campaign=000033032-our-amp_prazdniki_roz"
+                title="Товары к 8 Марта" target="_blank">
+                Товары <br> к 8 Марта
+              </a>
+            </div>
+            <div class="category__card">
+              <a class="category__img"
+                href="https://www.sima-land.ru/apteka/?utm_source=email&utm_medium=adv_hand&utm_campaign=000033032-our-amp_prazdniki_roz"
+                title="Аптечные товары" target="_blank">
+                <amp-img width="80" height="80" layout="fixed" alt="Аптечные товары"
+                  src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032877/19.png"></amp-img>
+              </a>
+              <a class="category__text"
+                href="https://www.sima-land.ru/apteka/?utm_source=email&utm_medium=adv_hand&utm_campaign=000033032-our-amp_prazdniki_roz"
+                title="Аптечные товары" target="_blank">
+                Аптечные <br> товары
+              </a>
+            </div>
+            <div class="category__card">
+              <a class="category__img"
+                href="https://www.sima-land.ru/podarochnye-nabory/?utm_source=email&utm_medium=adv_hand&utm_campaign=000033032-our-amp_prazdniki_roz"
+                title="Подарочные наборы" target="_blank">
+                <amp-img width="80" height="80" layout="fixed" alt="Подарочные наборы"
+                  src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032877/20.png"></amp-img>
+              </a>
+              <a class="category__text"
+                href="https://www.sima-land.ru/podarochnye-nabory/?utm_source=email&utm_medium=adv_hand&utm_campaign=000033032-our-amp_prazdniki_roz"
+                title="Подарочные наборы" target="_blank">
+                Подарочные <br> наборы
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="site-sections">
+          <h2 class="site-sections__title">Полезные разделы сайта</h2>
+          <div class="site-sections__lists">
+            <ul class="site-sections__list">
+              <li>
+                <a class="site-sections__link" target="_blank"
+                  href="https://www.sima-land.ru/info/oplata/?utm_source=email&utm_medium=adv_hand&utm_campaign=000033032-our-amp_prazdniki_roz">Оплата
+                  заказа</a>
+              </li>
+              <li>
+                <a class="site-sections__link" target="_blank"
+                  href="https://www.sima-land.ru/info/delivery/?utm_source=email&utm_medium=adv_hand&utm_campaign=000033032-our-amp_prazdniki_roz">Условия
+                  доставки</a>
+              </li>
+              <li>
+                <a class="site-sections__link" target="_blank"
+                  href="https://www.sima-land.ru/info/status-zakaza/?utm_source=email&utm_medium=adv_hand&utm_campaign=000033032-our-amp_prazdniki_roz">Отслеживание
+                  заказа</a>
+              </li>
+              <li>
+                <a class=" site-sections__link" target="_blank"
+                  href="https://www.sima-land.ru/info/poluchenie_tovara/?utm_source=email&utm_medium=adv_hand&utm_campaign=000033032-our-amp_prazdniki_roz">Получение
+                  заказа</a>
+              </li>
+            </ul>
+            <ul class="site-sections__list">
+              <li>
+                <a class="site-sections__link" target="_blank"
+                  href="https://www.sima-land.ru/info/dogovor/?utm_source=email&utm_medium=adv_hand&utm_campaign=000033032-our-amp_prazdniki_roz">Заключение
+                  договора</a>
+              </li>
+              <li>
+                <a class="site-sections__link" target="_blank"
+                  href="https://www.sima-land.ru/info/shop/?utm_source=email&utm_medium=adv_hand&utm_campaign=000033032-our-amp_prazdniki_roz">Поддержка
+                  бизнеса</a>
+              </li>
+              <li>
+                <a class="site-sections__link" target="_blank"
+                  href="https://www.sima-land.ru/price/?utm_source=email&utm_medium=adv_hand&utm_campaign=000033032-our-amp_prazdniki_roz">Прайс-листы</a>
+              </li>
+              <li>
+                <a class="site-sections__link" target="_blank"
+                  href="https://www.sima-land.ru/opt/?utm_source=email&utm_medium=adv_hand&utm_campaign=000033032-our-amp_prazdniki_roz">Оптовые
+                  цены</a>
+              </li>
+            </ul>
+            <ul class="site-sections__list">
+              <li>
+                <a class="site-sections__link" target="_blank"
+                  href="https://www.sima-land.ru/vdokhnovenie/?utm_source=email&utm_medium=adv_hand&utm_campaign=000033032-our-amp_prazdniki_roz">Журнал
+                  «Вдохновение»</a>
+              </li>
+              <li>
+                <a class="site-sections__link" target="_blank"
+                  href="https://rabota.sima-land.ru/?utm_source=email&utm_medium=adv_hand&utm_campaign=000033032-our-amp_prazdniki_roz">Вакансии</a>
+              </li>
+              <li>
+                <a class="site-sections__link" target="_blank"
+                  href="https://www.sima-land.ru/info/?utm_source=email&utm_medium=adv_hand&utm_campaign=000033032-our-amp_prazdniki_roz">Помощь
+                  покупателям</a>
+              </li>
+              <li>
+                <a class="site-sections__link" target="_blank"
+                  href="https://www.sima-land.ru/kontakty/managers/?utm_source=email&utm_medium=adv_hand&utm_campaign=000033032-our-amp_prazdniki_roz">Территориальный
+                  менеджер</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="social-network">
+          <div class="social-network__links">
+            <a class="social-network__link" href="https://zen.yandex.ru/sima_land" target="_blank">
+              <amp-img width="45" height="45" layout="fixed"
+                src="https://rassylka.static1-sima-land.com/ftp_rassylka/template/social/dzen.png" alt="Дзен"></amp-img>
+            </a>
+            <a class="social-network__link" href="https://vk.com/sima_land/" target="_blank">
+              <amp-img width="45" height="45" layout="fixed"
+                src="https://rassylka.static1-sima-land.com/ftp_rassylka/template/social/vk.png"
+                alt="ВКонтакте"></amp-img>
+            </a>
+            <a class="social-network__link" href="https://www.ok.ru/simaland/" target="_blank">
+              <amp-img width="45" height="45" layout="fixed"
+                src="https://rassylka.static1-sima-land.com/ftp_rassylka/template/social/ok.png"
+                alt="Одноклассники"></amp-img>
+            </a>
+            <a class="social-network__link" href="https://t.me/sima_land/" target="_blank">
+              <amp-img width="45" height="45" layout="fixed"
+                src="https://rassylka.static1-sima-land.com/ftp_rassylka/template/social/tel.png"
+                alt="Telegram"></amp-img>
+            </a>
+            <a class="social-network__link" href="https://www.youtube.com/channel/UCjA859KVI2UGvt2FYwTw8VQ"
+              target="_blank">
+              <amp-img width="45" height="45" layout="fixed"
+                src="https://rassylka.static1-sima-land.com/ftp_rassylka/template/social/utb.png"
+                alt="YouTube"></amp-img>
+            </a>
+          </div>
+          <div class="social-network__images">
+            <a class="social-network__img" href="https://play.google.com/store/apps/details?id=ru.sima_land.spb.market"
+              target="_blank">
+              <amp-img width="132" height="40" layout="fixed"
+                src="https://rassylka.static1-sima-land.com/ftp_rassylka/template/design2020/gp.png"
+                alt="Google Play"></amp-img>
+            </a>
+            <a class="social-network__img" href="https://itunes.apple.com/ru/app/sima-lend/id1057565689?mt=8/"
+              target="_blank">
+              <amp-img width="132" height="40" layout="fixed"
+                src="https://rassylka.static1-sima-land.com/ftp_rassylka/template/design2020/as.png"
+                alt="App store"></amp-img>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- <div>
+        <div class="footer">
+          <p class="footer__text">Указанные цены и наличие товаров действительны на момент отправки. Актуальную
+            информацию
+            уточняйте у <a class="footer__link"
+              href="https://www.sima-land.ru/kontakty/managers/?utm_source=email&utm_medium=adv_hand&utm_campaign=000033032-our-amp_prazdniki_roz"
+              target="_blank">менеджеров</a>.</p>
+          <p class="footer__text">Не открывается письмо? <a class="footer__link" href="${ Message.AccessibilityLink }"
+              target="_blank">Посмотрите его в браузере</a>.</p>
+        </div>
+        <div class="subscribe">
+          @{ set k1 = sha512(Recipient.Email) } @{ set k2 =
+          sha512(Recipient.Email&"14ed26bc-0d2f-4fd8-8682-357587e2383e")}
+          <p class="subscribe__text">Вы получили это сообщение, потому что подписаны на тип «Подборки товаров по
+            категориям» на сайте
+            <a class="subscribe__link" href="https://www.sima-land.ru/cabinet/unsubscribe/?encrypted-new-email=${k1&"
+              |"&k2}" target="_blank">Настроить
+              рассылки или отписаться</a>.
+          </p>
+        </div>
+      </div> -->
+    </div>
+  </div>
+</body>
+
+</html>

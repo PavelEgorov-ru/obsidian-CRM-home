@@ -1,0 +1,1052 @@
+<!doctype html>
+<html ⚡4email data-css-strict lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+  <!-- <script async custom-element="amp-anim" src="https://cdn.ampproject.org/v0/amp-anim-0.1.js"></script> -->
+  <script custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js" async></script>
+  <style amp4email-boilerplate>
+    body {
+      visibility: hidden
+    }
+  </style>
+  <style amp-custom>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .no-wrap {
+      white-space: nowrap;
+    }
+
+    .border-radius {
+      border-radius: 4px;
+    }
+
+    .border-radius-2 {
+      border-radius: 14px;
+    }
+
+    .body {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+      color: #212121;
+      background-color: #f5f5f5;
+    }
+
+    .body__container {
+      max-width: 600px;
+      margin: auto;
+      background-color: #f5f5f5;
+    }
+
+    .preheader {
+      padding: 4px 16px;
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      line-height: 13px;
+      color: #9e9e9e;
+      background-color: #212121;
+    }
+
+    .menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 60px;
+      padding: 16px;
+      font-family: Arial, sans-serif;
+      background-color: #3a3a3b;
+    }
+
+    .menu__list {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      line-height: 20px;
+      list-style: none;
+    }
+
+    .menu__link {
+      text-decoration: none;
+      color: #ffffff;
+    }
+
+    .menu__link:hover {
+      color: #646363;
+    }
+
+    .content {
+      margin-top: 8px;
+      font-family: Arial, sans-serif;
+      background-color: #216145;
+    }
+
+    .content__heading {
+      padding: 32px 16px 8px;
+      font-size: 24px;
+      line-height: 28px;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    .content__text {
+      padding: 8px 16px 40px;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      box-sizing: content-box;
+      padding: 32px 16px 40px;
+    }
+
+    .button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 40px;
+      margin: auto;
+      padding: 0px 16px;
+      border-radius: 4px;
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 24px;
+      text-align: center;
+      text-decoration: none;
+      color: #ffffff;
+      background-color: #CD9425;
+      transition: opacity ease 0.3s;
+    }
+
+    .button:hover {
+      opacity: 0.9;
+    }
+
+    .cards {
+      display: flex;
+      margin: 8px 16px 0px;
+      max-width: 568px;
+      justify-content: center;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      display: block;
+      max-height: 184px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: opacity ease 0.3s;
+    }
+
+    .card:hover {
+      opacity: 0.9;
+    }
+
+    .addition {
+      font-family: Arial, sans-serif;
+      padding: 16px 16px 16px 16px;
+      background-color: #fafafa;
+    }
+
+    .site-sections {
+      margin-top: 8px;
+    }
+
+
+    .site-sections__title {
+      margin-bottom: 8px;
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: bold;
+      color: #212121;
+    }
+
+    .site-sections__lists {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .site-sections__list {
+      list-style: none;
+    }
+
+    .site-sections__list li {
+      padding-bottom: 8px;
+    }
+
+    .site-sections__link {
+      font-size: 14px;
+      line-height: 20px;
+      color: #9e9e9e;
+      transition: opacity ease 0.3s;
+    }
+
+    .site-sections__link:hover {
+      opacity: 0.9;
+    }
+
+    .category {
+      margin-top: 8px;
+      margin-bottom: 4px;
+      padding: 16px;
+      background-color: #216145;
+    }
+
+    .category__cards {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 12px 0;
+    }
+
+    .category__card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      /* max-width: 85px; */
+      text-align: center;
+    }
+
+    .category__img {
+      /* height: 80px; */
+      margin-bottom: 4px;
+      border-radius: 8px;
+      transition: opacity ease 0.3s;
+    }
+
+    .category__img:hover {
+      opacity: 0.9;
+    }
+
+    .category__text {
+      font-size: 14px;
+      line-height: 18px;
+      color: #ffffff;
+      transition: opacity ease 0.3s;
+    }
+
+    .category__text:hover {
+      opacity: 0.9;
+    }
+
+    .social-network {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      margin-top: 8px;
+      margin-bottom: 4px;
+    }
+
+    .subscribes {
+      margin-bottom: 8px;
+      font-family: Arial, sans-serif;
+      color: #212121;
+    }
+
+    .subscribes__heading {
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: bold;
+    }
+
+    .subscribes__block {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      gap: 8px
+    }
+
+    .subscribes__card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      max-width: 280px;
+      min-height: 130px;
+    }
+
+    .subscribes__text {
+      padding: 12px 12px 8px 0px;
+      font-size: 14px;
+      line-height: 22px;
+      color: #9e9e9e
+    }
+
+    .subscribes__button {
+      display: block;
+      padding: 8px;
+      height: 40px;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 700;
+      background-color: #1F84DB;
+      border-radius: 4px;
+      text-decoration: none;
+      text-align: center;
+      color: #ffffff;
+      transition: opacity ease 0.3s;
+    }
+
+    .subscribes__button:hover {
+      opacity: 0.9;
+    }
+
+    .social-network__links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .social-network__link {
+      width: 45px;
+      height: 45px;
+      text-decoration: none;
+      border-radius: 100%;
+      transition: opacity ease 0.3s;
+    }
+
+    .social-network__link:hover {
+      opacity: 0.9;
+    }
+
+    .social-network__images {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .social-network__img {
+      width: 132px;
+      height: 40px;
+      text-decoration: none;
+      border-radius: 6px;
+      border: 2px solid #ffffff;
+    }
+
+    .footer {
+      padding: 12px 16px;
+      font-family: Arial, sans-serif;
+      background-color: #EBEBEB;
+    }
+
+    .footer__text {
+      font-size: 12px;
+      line-height: 16px;
+      color: #9e9e9e;
+    }
+
+    .footer__text:last-child {
+      padding-top: 12px;
+    }
+
+    .footer__link {
+      color: #9e9e9e;
+    }
+
+
+    .subscribe {
+      padding: 12px 16px;
+      font-family: Arial, sans-serif;
+      background-color: #3A3A3B;
+    }
+
+    .subscribe__text {
+      font-size: 12px;
+      line-height: 16px;
+      color: #ffffff;
+    }
+
+    .subscribe__link {
+      color: #ffffff;
+    }
+
+    amp-carousel[controls] .amp-carousel-button {
+      position: absolute;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      visibility: visible;
+    }
+
+    amp-carousel[controls] .amp-carousel-button:hover {
+      cursor: pointer;
+    }
+
+    @media screen and (max-width: 599px) {
+      .kit__text {
+        width: 100%;
+        padding: 0px;
+        text-align: center;
+      }
+
+      .subscribes__block {
+        flex-direction: column;
+      }
+
+      .subscribes__heading {
+        text-align: center;
+      }
+
+      .subscribes__card {
+        max-width: 450px;
+      }
+
+      .subscribes__button {
+        align-self: center;
+        width: 280px;
+      }
+    }
+
+    @media screen and (max-width: 440px) {
+      .content__heading {
+        font-size: 20px;
+        line-height: 24px;
+      }
+
+      .cards {
+        margin: 24px 0px 0px;
+      }
+
+      .content__text {
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      .category__cards {
+        align-items: start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  @{ set k1 = sha512(Recipient.Email) } @{ set k2 =
+  sha512(Recipient.Email&"14ed26bc-0d2f-4fd8-8682-357587e2383e")}
+  <amp-state id="state">
+    <script type="application/json">
+      {
+      "check1": 0,
+      "check2": 0,
+      "check3": 0,
+      "check4": 0,
+      "check5": 0,
+      "check6": 0,
+      "check7": 0
+      }
+    </script>
+  </amp-state>
+  <div class="body">
+    <div class="body__container">
+      <header class="header">
+        <p class="preheader">
+          Вас приветствует интернет-магазин Сима-ленд
+        </p>
+        <div class="menu">
+          <a href="https://www.sima-land.ru/" target="_blank">
+            <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/template/design2020/gold21.png"
+              width="113" height="45" alt="">
+            </amp-img>
+          </a>
+          <ul class="menu__list">
+            <li>
+              <a class="menu__link" href="https://www.sima-land.ru/offer/" target="_blank">
+                Акции
+              </a>
+            </li>
+            <li>
+              <a class="menu__link" href="https://www.sima-land.ru/sale/knigi" target="_blank">
+                Скидки
+              </a>
+            </li>
+            <li>
+              <a class="menu__link" href="https://www.sima-land.ru/hit/knigi" target="_blank">
+                Хиты продаж
+              </a>
+            </li>
+            <li>
+              <a class="menu__link" href="https://www.sima-land.ru/new/knigi" target="_blank">
+                Новинки
+              </a>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <main class="main">
+        <section class="content">
+          <table align="center" cellpadding="0" cellspacing="0" width="100%" class="table-carousel">
+            <tr>
+              <td class="td" align="left" valign="top">
+                <amp-carousel controls loop height="120" width="200" type="slides" layout="responsive" role="region"
+                  aria-label="Looping carousel"
+                  on="slideChange:AMP.setState({state:{check1: 1, check2: 0, check3: 0, check4: 0, check5: 0, check6: 0, check7: 0}})">
+                  <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/01.jpg" height="120"
+                    width="200" alt="Уличное освещение" layout="responsive"></amp-img>
+                  <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/01.jpg" height="120"
+                    width="200" alt="Уличное освещение" layout="responsive"></amp-img>
+              </td>
+              <td class="td" align="left" valign="top">
+                <amp-carousel controls loop height="120" width="200" type="slides" layout="responsive" role="region"
+                  aria-label="Looping carousel">
+                  <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/02.jpg" height="120"
+                    width="200" alt="баннер" layout="responsive" title="11111"></amp-img>
+              </td>
+              <td class="td" align="left" valign="top">
+                <amp-carousel controls loop height="120" width="200" type="slides" layout="responsive" role="region"
+                  aria-label="Looping carousel">
+                  <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/03.jpg" height="120"
+                    width="200" alt="баннер" layout="responsive"></amp-img>
+              </td>
+            </tr>
+            <tr>
+              <td class="td" align="left" valign="top">
+                <amp-carousel controls loop height="120" width="200" type="slides" layout="responsive" role="region"
+                  aria-label="Looping carousel"
+                  on="slideChange:AMP.setState({state:{check1: 0, check2: 1, check3: 0, check4: 0, check5: 0, check6: 0, check7: 0}})">
+                  <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/04.jpg" height="120"
+                    width="200" alt="Интерьерные укаршения" layout="responsive"></amp-img>
+                  <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/04.jpg" height="120"
+                    width="200" alt="Интерьерные укаршения" layout="responsive"></amp-img>
+              </td>
+              <td class="td" align="left" valign="top">
+                <amp-carousel controls loop height="120" width="200" type="slides" layout="responsive" role="region"
+                  aria-label="Looping carousel"
+                  on="slideChange:AMP.setState({state:{check1: 0, check2: 0, check3: 3, check4: 0, check5: 0, check6: 0, check7: 0}})">
+                  <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/05.jpg" height="120"
+                    width="200" alt="Гирлянды" layout="responsive"></amp-img>
+                  <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/05.jpg" height="120"
+                    width="200" alt="Гирлянды" layout="responsive"></amp-img>
+              </td>
+              <td class="td" align="left" valign="top">
+                <amp-carousel controls loop height="120" width="200" type="slides" layout="responsive" role="region"
+                  aria-label="Looping carousel"
+                  on="slideChange:AMP.setState({state:{check1: 0, check2: 0, check3: 0, check4: 0, check5: 1, check6: 0, check7: 0}})">
+                  <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/06.jpg" height="120"
+                    width="200" alt="баннер" layout="responsive"></amp-img>
+                  <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/06.jpg" height="120"
+                    width="200" alt="баннер" layout="responsive"></amp-img>
+              </td>
+            </tr>
+            <tr>
+              <td class="td" align="left" valign="top">
+                <amp-carousel controls loop height="120" width="200" type="slides" layout="responsive" role="region"
+                  aria-label="Looping carousel">
+                  <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/07.jpg" height="120"
+                    width="200" alt="баннер" layout="responsive"></amp-img>
+              </td>
+              <td class="td" align="left" valign="top">
+                <amp-carousel controls loop height="120" width="200" type="slides" layout="responsive" role="region"
+                  aria-label="Looping carousel"
+                  on="slideChange:AMP.setState({state:{check1: 0, check2: 0, check3: 0, check4: 1, check5: 0, check6: 0, check7: 0}})">
+                  <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/08.jpg" height="120"
+                    width="200" alt="Ёлочные украшения" layout="responsive"></amp-img>
+                  <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/08.jpg" height="120"
+                    width="200" alt="Ёлочные украшения" layout="responsive"></amp-img>
+              </td>
+              <td class="td" align="left" valign="top">
+                <amp-carousel controls loop height="120" width="200" type="slides" layout="responsive" role="region"
+                  aria-label="Looping carousel">
+                  <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/09.jpg" height="120"
+                    width="200" alt="Ёлки" layout="responsive"></amp-img>
+              </td>
+            </tr>
+            <tr>
+              <td class="td" align="left" valign="top">
+                <amp-carousel controls loop height="120" width="200" type="slides" layout="responsive" role="region"
+                  aria-label="Looping carousel">
+                  <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/10.jpg" height="120"
+                    width="200" alt="баннер" layout="responsive"></amp-img>
+              </td>
+              <td class="td" align="left" valign="top">
+                <amp-carousel controls loop height="120" width="200" type="slides" layout="responsive" role="region"
+                  aria-label="Looping carousel"
+                  on="slideChange:AMP.setState({state:{check1: 0, check2: 0, check3: 0, check4: 0, check5: 0, check6: 1, check7: 0}})">
+                  <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/11.jpg" height="120"
+                    width="200" alt="Подарки" layout="responsive"></amp-img>
+                  <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/11.jpg" height="120"
+                    width="200" alt="Подарки" layout="responsive"></amp-img>
+              </td>
+              <td class="td" align="left" valign="top">
+                <amp-carousel controls loop height="120" width="200" type="slides" layout="responsive" role="region"
+                  aria-label="Looping carousel"
+                  on="slideChange:AMP.setState({state:{check1: 0, check2: 0, check3: 0, check4: 0, check5: 0, check6: 0, check7: 1}})">
+                  <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/12.jpg" height="120"
+                    width="200" alt="Интерьерные фигуры" layout="responsive"></amp-img>
+                  <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/12.jpg" height="120"
+                    width="200" alt="Интерьерные фигуры" layout="responsive"></amp-img>
+              </td>
+            </tr>
+          </table>
+          <div
+            [hidden]="[state.check1, state,check2, state.check3, state,check4, state,check5, state,check6, state,check7].join('') != '0000000' ">
+            <p class="content__heading">
+              Подготовка полным ходом
+            </p>
+            <p class="content__text">
+              Самое время выбирать всё необходимое к&nbsp;Новому году. Актуальные товары мы&nbsp;собрали здесь. Кликайте
+              по&nbsp;точкам на&nbsp;баннере, чтобы увидеть соответствующие подборки и&nbsp;подготовиться
+              к&nbsp;празднику!
+            </p>
+          </div>
+          <div hidden [hidden]="state.check1 == 0">
+            <p class="content__heading">
+              Уличное освещение
+            </p>
+            <div class="cards">
+              <a class="card" href="https://www.sima-land.ru/4814717/" title="Занавес" target="_blank">
+                <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/19.png" height="184"
+                  width="184" layout="fixed" alt="Занавес"></amp-img>
+              </a>
+              <a class="card" href="https://www.sima-land.ru/3584145/" title="Гирлянда нить" target="_blank">
+                <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/20.png" height="184"
+                  width="184" layout="fixed" alt="Гирлянда нить"></amp-img>
+              </a>
+              <a class="card" href="https://www.sima-land.ru/4357287/" title="Светодиодное дерево" target="_blank">
+                <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/21.png" height="184"
+                  width="184" layout="fixed" alt="Светодиодное дерево"></amp-img>
+              </a>
+              <a class="card" href="https://www.sima-land.ru/461036/" title="Светодиодный шнур" target="_blank">
+                <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/22.png" height="184"
+                  width="184" layout="fixed" alt="Светодиодный шнур"></amp-img>
+              </a>
+              <a class="card" href="https://www.sima-land.ru/187276/" title="Бахрома" target="_blank">
+                <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/23.png" height="184"
+                  width="184" layout="fixed" alt="Бахрома"></amp-img>
+              </a>
+              <a class="card" href="https://www.sima-land.ru/2310847/" title="Светодиодная фигура" target="_blank">
+                <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/24.png" height="184"
+                  width="184" layout="fixed" alt="Светодиодная фигура"></amp-img>
+              </a>
+            </div>
+            <div class="button-container">
+              <a href="https://www.sima-land.ru/promo/ulichnye-novogodnie-ukrasheniya/" target="_blank"
+                title="Выбрать гирлянды" class="button">Выбрать гирлянды</a>
+            </div>
+          </div>
+          <div hidden [hidden]="state.check2 == 0">
+            <p class="content__heading">
+              Интерьерные украшения
+            </p>
+            <div class="cards">
+              <a class="card" href="https://www.sima-land.ru/3608266/" title="Набор для декора" target="_blank">
+                <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/25.png" height="184"
+                  width="184" layout="fixed" alt="Набор для декора"></amp-img>
+              </a>
+              <a class="card" href="https://www.sima-land.ru/7575475/" title="Набор для декора" target="_blank">
+                <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/26.png" height="184"
+                  width="184" layout="fixed" alt="Набор для декора"></amp-img>
+              </a>
+              <a class="card" href="https://www.sima-land.ru/9716195/" title="Кукольная миниатюра" target="_blank">
+                <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/27.png" height="184"
+                  width="184" layout="fixed" alt="Кукольная миниатюра"></amp-img>
+              </a>
+              <a class="card" href="https://www.sima-land.ru/701536/" title="Дождик" target="_blank">
+                <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/28.png" height="184"
+                  width="184" layout="fixed" alt="Дождик"></amp-img>
+              </a>
+              <a class="card" href="https://www.sima-land.ru/3535536/" title="Еловая ветка" target="_blank">
+                <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/29.png" height="184"
+                  width="184" layout="fixed" alt="Еловая ветка"></amp-img>
+              </a>
+              <a class="card" href="https://www.sima-land.ru/5036616/" title="Мишура" target="_blank">
+                <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/30.png" height="184"
+                  width="184" layout="fixed" alt="Мишура"></amp-img>
+              </a>
+            </div>
+            <div class="button-container">
+              <a href="https://www.sima-land.ru/novogodnie-ukrasheniya-dlya-doma/" target="_blank" title="Украсить дом"
+                class="button">Украсить дом</a>
+            </div>
+          </div>
+          <div hidden [hidden]="state.check3 == 0">
+            <p class="content__heading">
+              Гирлянды
+            </p>
+            <div class="cards">
+              <a class="card" href="https://www.sima-land.ru/3556787/" title="Нить" target="_blank">
+                <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/7.png" height="184"
+                  width="184" layout="fixed" alt="Нить"></amp-img>
+              </a>
+              <a class=" card" href="https://www.sima-land.ru/3556828/" title="Бахрома " target="_blank">
+                <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/8.png" height="184"
+                  width="184" layout="fixed" alt="Бахрома "></amp-img>
+              </a>
+              <a class="card" href="https://www.sima-land.ru/5198378/" title="Мишура" target="_blank">
+                <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/9.png" height="184"
+                  width="184" layout="fixed" alt="Мишура"></amp-img>
+              </a>
+              <a class="card" href="https://www.sima-land.ru/5985167/" title="Гирлянда-клубки" target="_blank">
+                <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/10.png" height="184"
+                  width="184" layout="fixed" alt="Гирлянда-клубки"></amp-img>
+              </a>
+              <a class="card" href="https://www.sima-land.ru/5248346/" title="Сосульки" target="_blank">
+                <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/11.png" height="184"
+                  width="184" layout="fixed" alt="Сосульки"></amp-img>
+              </a>
+              <a class="card" href="https://www.sima-land.ru/2433902/" title="Нить" target="_blank">
+                <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/12.png" height="184"
+                  width="184" layout="fixed" alt="Нить"></amp-img>
+              </a>
+            </div>
+            <div class="button-container">
+              <a href="https://www.sima-land.ru/komnatnye-girlyandy/?sort=rating" target="_blank"
+                title="Выбрать гирлянды" class="button">Выбрать гирлянды</a>
+            </div>
+          </div>
+          <div hidden [hidden]="state.check4 == 0">
+            <p class="content__heading">
+              Ёлочные украшения
+            </p>
+            <div class="cards">
+              <a class="card" href="https://www.sima-land.ru/3555421/" title="Ёлочные шишки" target="_blank">
+                <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/13.png" height="184"
+                  width="184" layout="fixed" alt="Ёлочные шишки"></amp-img>
+              </a>
+              <a class=" card" href="https://www.sima-land.ru/2371222/" title="Сюрприз" target="_blank">
+                <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/14.png" height="184"
+                  width="184" layout="fixed" alt="Сюрприз"></amp-img>
+              </a>
+              <a class="card" href="https://www.sima-land.ru/3562588/" title="Ёлочные шары" target="_blank">
+                <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/15.png" height="184"
+                  width="184" layout="fixed" alt="Ёлочные шары"></amp-img>
+              </a>
+              <a class="card" href="https://www.sima-land.ru/3555435/" title="Ёлочные украшения" target="_blank">
+                <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/16.png" height="184"
+                  width="184" layout="fixed" alt="Ёлочные украшения"></amp-img>
+              </a>
+              <a class="card" href="https://www.sima-land.ru/154264/" title="Подвеска" target="_blank">
+                <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/17.png" height="184"
+                  width="184" layout="fixed" alt="Подвеска"></amp-img>
+              </a>
+              <a class="card" href="https://www.sima-land.ru/3612318/" title="Звезда" target="_blank">
+                <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/18.png" height="184"
+                  width="184" layout="fixed" alt="Звезда"></amp-img>
+              </a>
+            </div>
+            <div class="button-container">
+              <a href="https://www.sima-land.ru/yolochnye-igrushki/?sort=rating" target="_blank" title="Выбрать игрушки"
+                class="button">Выбрать игрушки</a>
+            </div>
+          </div>
+          <div hidden [hidden]="state.check5 == 0">
+            <p class="content__heading">
+              Ёлки
+            </p>
+            <div class="cards">
+              <a class="card" href="https://www.sima-land.ru/701417/" title="Ёлка" target="_blank">
+                <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/1.png" height="184"
+                  width="184" layout="fixed" alt="Ёлка"></amp-img>
+              </a>
+              <a class=" card" href="https://www.sima-land.ru/703635/" title="Ёлка" target="_blank">
+                <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/2.png" height="184"
+                  width="184" layout="fixed" alt="Ёлка"></amp-img>
+              </a>
+              <a class="card" href="https://www.sima-land.ru/5187173/" title="Ёлка" target="_blank">
+                <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/3_1.png" height="184"
+                  width="184" layout="fixed" alt="Ёлка"></amp-img>
+              </a>
+              <a class="card" href="https://www.sima-land.ru/1638482/" title="Ёлка" target="_blank">
+                <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/4.png" height="184"
+                  width="184" layout="fixed" alt="Ёлка"></amp-img>
+              </a>
+              <a class="card" href="https://www.sima-land.ru/540646/" title="Ёлка" target="_blank">
+                <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/5.png" height="184"
+                  width="184" layout="fixed" alt="Ёлка"></amp-img>
+              </a>
+              <a class="card" href="https://www.sima-land.ru/185431/" title="Ёлка" target="_blank">
+                <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/6_1.png" height="184"
+                  width="184" layout="fixed" alt="Ёлка"></amp-img>
+              </a>
+            </div>
+            <div class="button-container">
+              <a href="https://www.sima-land.ru/iskusstvennye-yolki/?f=%7B%22json_oer%22%3A%5B%22100%22%2C%22150%22%5D%7D&sort=rating"
+                target="_blank" title="Выбрать ёлку" class="button">Выбрать ёлку</a>
+            </div>
+          </div>
+          <div hidden [hidden]="state.check6 == 0">
+            <p class="content__heading">
+              Подарки
+            </p>
+            <div class="cards">
+              <a class="card" href="https://www.sima-land.ru/9492893/" title="Набор Буква-ленд" target="_blank">
+                <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/37_1.png" height="184"
+                  width="184" layout="fixed" alt="Набор Буква-ленд"></amp-img>
+              </a>
+              <a class=" card" href="https://www.sima-land.ru/5394864/" title="Набор автохимии" target="_blank">
+                <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/38.png" height="184"
+                  width="184" layout="fixed" alt="Набор автохимии"></amp-img>
+              </a>
+              <a class="card" href="https://www.sima-land.ru/7734489/" title="Школа деда мороза" target="_blank">
+                <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/39.png" height="184"
+                  width="184" layout="fixed" alt="Школа деда мороза"></amp-img>
+              </a>
+              <a class="card" href="https://www.sima-land.ru/4814926/" title="Набор для душа" target="_blank">
+                <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/40_2.png" height="184"
+                  width="184" layout="fixed" alt="Набор для душа"></amp-img>
+              </a>
+              <a class="card" href="https://www.sima-land.ru/7994671/" title="Подарочный набор" target="_blank">
+                <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/41.png" height="184"
+                  width="184" layout="fixed" alt="Подарочный набор"></amp-img>
+              </a>
+              <a class="card" href="https://www.sima-land.ru/7673794/" title="Подарочный набор" target="_blank">
+                <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/42.png" height="184"
+                  width="184" layout="fixed" alt="Подарочный набор"></amp-img>
+              </a>
+            </div>
+            <div class="button-container">
+              <a href="https://www.sima-land.ru/novogodnie-podarochnye-nabory/?sort=-price&subcategory=category_page"
+                target="_blank" title="Выбрать подарок" class="button">Выбрать подарок</a>
+            </div>
+          </div>
+          <div hidden [hidden]="state.check7 == 0">
+            <p class="content__heading">
+              Интерьерные фигуры
+            </p>
+            <div class="cards">
+              <a class="card" href="https://www.sima-land.ru/3555351/" title="Дед Мороз" target="_blank">
+                <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/31.png" height="184"
+                  width="184" layout="fixed" alt="Дед Мороз"></amp-img>
+              </a>
+              <a class=" card" href="https://www.sima-land.ru/6939402/" title="Снегурочка" target="_blank">
+                <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/32.png" height="184"
+                  width="184" layout="fixed" alt="Снегурочка"></amp-img>
+              </a>
+              <a class="card" href="https://www.sima-land.ru/3669422/" title="Фонарь" target="_blank">
+                <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/33.png" height="184"
+                  width="184" layout="fixed" alt="Фонарь"></amp-img>
+              </a>
+              <a class="card" href="https://www.sima-land.ru/3588735/" title="Домик" target="_blank">
+                <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/34.png" height="184"
+                  width="184" layout="fixed" alt="Домик"></amp-img>
+              </a>
+              <a class="card" href="https://www.sima-land.ru/5049758/" title="Светодиодная фигура" target="_blank">
+                <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/35.png" height="184"
+                  width="184" layout="fixed" alt="Светодиодная фигура"></amp-img>
+              </a>
+              <a class="card" href="https://www.sima-land.ru/4357002/" title="Светодиодная фигура" target="_blank">
+                <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/36.png" height="184"
+                  width="184" layout="fixed" alt="Светодиодная фигура"></amp-img>
+              </a>
+            </div>
+            <div class="button-container">
+              <a href="https://www.sima-land.ru/novogodnie-svetovye-figury/?sort=rating" target="_blank"
+                title="Украсить дом" class="button">Украсить дом</a>
+            </div>
+          </div>
+        </section>
+        <section class="addition category">
+          <div class="category__cards">
+            <div class="category__card">
+              <a class="category__img" href="https://www.sima-land.ru/novogodnyaya-upakovka/" target="_blank">
+                <amp-img width="107" height="164" layout="fixed" alt="Упаковка"
+                  src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/001.png"></amp-img>
+              </a>
+              <a class="category__text" href="https://www.sima-land.ru/novogodnyaya-upakovka/" target="_blank">
+                Упаковка
+              </a>
+            </div>
+            <div class="category__card">
+              <a class="category__img" href="https://www.sima-land.ru/novogodnyaya-pirotekhnika/ " target="_blank">
+                <amp-img width="107" height="164" layout="fixed" alt="Пиротехника"
+                  src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/002.png"></amp-img>
+              </a>
+              <a class="category__text" href="https://www.sima-land.ru/novogodnyaya-pirotekhnika/ " target="_blank">
+                Пиротехника
+              </a>
+            </div>
+            <div class="category__card">
+              <a class="category__img" href="https://www.sima-land.ru/simvol-goda/" target="_blank">
+                <amp-img width="107" height="164" layout="fixed" alt="Символ года"
+                  src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/003.png"></amp-img>
+              </a>
+              <a class="category__text" href="https://www.sima-land.ru/simvol-goda/" target="_blank">
+                Символ года
+              </a>
+            </div>
+            <div class="category__card">
+              <a class="category__img" href="https://www.sima-land.ru/novogodnie-kalendari/" target="_blank">
+                <amp-img width="107" height="164" layout="fixed" alt="Календари"
+                  src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/004.png"></amp-img>
+              </a>
+              <a class="category__text" href="https://www.sima-land.ru/novogodnie-kalendari/" target="_blank">
+                Календари
+              </a>
+            </div>
+            <div class="category__card">
+              <a class="category__img" href="https://www.sima-land.ru/novogodnie-otkrytki-i-konverty/" target="_blank">
+                <amp-img width="107" height="164" layout="fixed" alt="Открытки"
+                  src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032765-2/005.png"></amp-img>
+              </a>
+              <a class="category__text" href="https://www.sima-land.ru/novogodnie-otkrytki-i-konverty/" target="_blank">
+                Открытки
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="addition site-sections">
+          <h2 class="site-sections__title">Полезные разделы сайта</h2>
+          <div class="site-sections__lists">
+            <ul class="site-sections__list">
+              <li>
+                <a class="site-sections__link" target="_blank" href="https://www.sima-land.ru/info/oplata/">Оплата
+                  заказа</a>
+              </li>
+              <li>
+                <a class="site-sections__link" target="_blank" href="https://www.sima-land.ru/info/delivery/">Условия
+                  доставки</a>
+              </li>
+              <li>
+                <a class="site-sections__link" target="_blank"
+                  href="https://www.sima-land.ru/info/status-zakaza/">Отслеживание
+                  заказа</a>
+              </li>
+              <li>
+                <a class=" site-sections__link" target="_blank"
+                  href="https://www.sima-land.ru/info/poluchenie_tovara/">Получение заказа</a>
+              </li>
+            </ul>
+            <ul class="site-sections__list">
+              <li>
+                <a class="site-sections__link" target="_blank" href="https://www.sima-land.ru/info/dogovor/">Заключение
+                  договора</a>
+              </li>
+              <li>
+                <a class="site-sections__link" target="_blank" href="https://www.sima-land.ru/info/shop/">Поддержка
+                  бизнеса</a>
+              </li>
+              <li>
+                <a class="site-sections__link" target="_blank" href="https://www.sima-land.ru/price/">Прайс-листы</a>
+              </li>
+              <li>
+                <a class="site-sections__link" target="_blank" href="https://www.sima-land.ru/opt/">Оптовые цены</a>
+              </li>
+            </ul>
+            <ul class="site-sections__list">
+              <li>
+                <a class="site-sections__link" target="_blank" href="https://www.sima-land.ru/vdokhnovenie/">Журнал
+                  «Вдохновение»</a>
+              </li>
+              <li>
+                <a class="site-sections__link" target="_blank" href="https://rabota.sima-land.ru/">Вакансии</a>
+              </li>
+              <li>
+                <a class="site-sections__link" target="_blank" href="https://www.sima-land.ru/info/">Помощь
+                  покупателям</a>
+              </li>
+              <li>
+                <a class="site-sections__link" target="_blank"
+                  href="https://www.sima-land.ru/kontakty/managers/">Территориальный менеджер</a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="addition social-network">
+          <div class="subscribes">
+            <p class="subscribes__heading">
+              Управление подписками
+            </p>
+            <div class="subscribes__block">
+              <div class="subscribes__card">
+                <p class="subscribes__text">Вы можете управлять типами рассылок, отключать и включать
+                  нужные.</p>
+                <a class="subscribes__button"
+                  href="https://www.sima-land.ru/cabinet/unsubscribe/?encrypted-new-email=${k1&" |"&k2}"
+                  target="_blank">Выбрать типы рассылок</a>
+              </div>
+              <div class="subscribes__card">
+                <p class="subscribes__text">А ещё — выбрать определённые категории товаров, по которым хотите получать
+                  письма.</p>
+                <a class="subscribes__button"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSdVD9Fg3hiPIjszgEizKq3gClU4iZOLvQNa1eyAc909-G0vJQ/viewform?usp=pp_url&entry.1874963287=${Recipient.Email}"
+                  target="_blank">Выбрать категории рассылок</a>
+              </div>
+            </div>
+          </div>
+          <div class="social-network__links">
+            <a class="social-network__link" href="https://zen.yandex.ru/sima_land" target="_blank">
+              <amp-img width="45" height="45" layout="fixed"
+                src="https://rassylka.static1-sima-land.com/ftp_rassylka/template/social/dzen.png" alt="Дзен"></amp-img>
+            </a>
+            <a class="social-network__link" href="https://vk.com/sima_land/" target="_blank">
+              <amp-img width="45" height="45" layout="fixed"
+                src="https://rassylka.static1-sima-land.com/ftp_rassylka/template/social/vk.png"
+                alt="ВКонтакте"></amp-img>
+            </a>
+            <a class="social-network__link" href="https://www.ok.ru/simaland/" target="_blank">
+              <amp-img width="45" height="45" layout="fixed"
+                src="https://rassylka.static1-sima-land.com/ftp_rassylka/template/social/ok.png"
+                alt="Одноклассники"></amp-img>
+            </a>
+            <a class="social-network__link" href="https://t.me/sima_land/" target="_blank">
+              <amp-img width="45" height="45" layout="fixed"
+                src="https://rassylka.static1-sima-land.com/ftp_rassylka/template/social/tel.png"
+                alt="Telegram"></amp-img>
+            </a>
+            <a class="social-network__link" href="https://www.youtube.com/channel/UCjA859KVI2UGvt2FYwTw8VQ"
+              target="_blank">
+              <amp-img width="45" height="45" layout="fixed"
+                src="https://rassylka.static1-sima-land.com/ftp_rassylka/template/social/utb.png"
+                alt="YouTube"></amp-img>
+            </a>
+          </div>
+          <div class="social-network__images">
+            <a class="social-network__img" href="https://play.google.com/store/apps/details?id=ru.sima_land.spb.market"
+              target="_blank">
+              <amp-img width="132" height="40" layout="fixed"
+                src="https://rassylka.static1-sima-land.com/ftp_rassylka/template/design2020/gp.png"
+                alt="Google Play"></amp-img>
+            </a>
+            <a class="social-network__img" href="https://itunes.apple.com/ru/app/sima-lend/id1057565689?mt=8/"
+              target="_blank">
+              <amp-img width="132" height="40" layout="fixed"
+                src="https://rassylka.static1-sima-land.com/ftp_rassylka/template/design2020/as.png"
+                alt="App store"></amp-img>
+            </a>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <div class="footer">
+          <p class="footer__text">Указанные цены и наличие товаров действительны на момент отправки. Актуальную
+            информацию
+            уточняйте у <a class="footer__link" href="https://www.sima-land.ru/kontakty/managers/"
+              target="_blank">менеджеров</a>.</p>
+          <p class="footer__text">Не открывается письмо? <a class="footer__link" href="${ Message.AccessibilityLink }"
+              target="_blank">Посмотрите его в браузере</a>.</p>
+        </div>
+        <div class="subscribe">
+          <p class="subscribe__text">Вы получили это сообщение, потому что подписаны на тип «Подборки товаров по
+            категориям» на сайте
+            <a class="subscribe__link" href="https://www.sima-land.ru/cabinet/unsubscribe/?encrypted-new-email=${k1&"
+              |"&k2}" target="_blank">Настроить
+              рассылки или отписаться</a>.
+          </p>
+        </div>
+      </footer>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,992 @@
+<!doctype html>
+<html ⚡4email data-css-strict lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+  <script custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js" async></script>
+  <style amp4email-boilerplate>
+    body {
+      visibility: hidden
+    }
+  </style>
+  <style amp-custom>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .border-radius {
+      border-radius: 4px;
+    }
+
+    .border-radius-2 {
+      border-radius: 14px;
+    }
+
+    .body {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+      color: #212121;
+      background-color: #FFF5E9;
+    }
+
+    .body__container {
+      max-width: 600px;
+      margin: auto;
+      background-color: #FFF5E9;
+    }
+
+    .preheader {
+      padding: 4px 16px;
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      line-height: 13px;
+      color: #9e9e9e;
+      background-color: #FFF5E9;
+    }
+
+    .menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 60px;
+      padding: 16px;
+      font-family: Arial, sans-serif;
+      background-color: #3a3a3b;
+      border-radius: 8px;
+    }
+
+    .menu__list {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      line-height: 20px;
+      list-style: none;
+    }
+
+    .menu__link {
+      text-decoration: none;
+      color: #ffffff;
+    }
+
+    .menu__link:hover {
+      color: #646363;
+    }
+
+    .banner {
+      border-top-right-radius: 8px;
+      border-top-left-radius: 8px;
+    }
+
+    .content {
+      margin-top: 8px;
+      font-family: Arial, sans-serif;
+      border-radius: 8px;
+      background-color: #ffffff;
+    }
+
+    .promo {
+      margin: 0 16px;
+      padding: 16px;
+      max-width: 568px;
+      border-radius: 8px;
+      background-color: #97DAFF;
+    }
+
+    .promo__heading {
+      padding: 8px 0px;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 24px;
+      text-align: center;
+    }
+
+    .promo__text {
+      margin: 8px 0px;
+      padding: 16px 8px;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 24px;
+      text-transform: uppercase;
+      text-align: center;
+      background-color: #ffffff;
+      border-radius: 8px;
+      border: 1px dashed #212121
+    }
+
+    .content__heading {
+      padding: 24px 16px 4px;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 36px;
+      text-align: center;
+      color: #212121;
+    }
+
+    .content__text {
+      padding: 4px 16px 40px;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      color: #212121;
+      text-align: center;
+    }
+
+    .content__text_warning {
+      padding: 0px 0px 16px;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 24px;
+      color: #212121;
+      text-align: left;
+    }
+
+    .min-padding {
+      padding: 20px 16px 20px;
+    }
+
+    .text-left {
+      font-size: 16px;
+      text-align: left;
+    }
+
+    .rules {
+      padding: 20px 16px;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      color: #212121;
+    }
+
+    .rules__heading {
+      padding-bottom: 8px;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 24px;
+    }
+
+    .rules__list {
+      padding: 0px 16px 16px;
+    }
+
+    .rules__description {
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    .divider {
+      margin: 0 16px;
+      height: 2px;
+      background-color: #97DAFF;
+    }
+
+    .conditions {
+      padding: 16px;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      line-height: 20px;
+      color: #545455;
+    }
+
+    .conditions__rows {
+      display: flex;
+      align-items: start;
+      gap: 8px;
+    }
+
+    .table-container {
+      max-width: 564px;
+      margin: 0 16px;
+      padding: 0px 16px 24px;
+    }
+
+    .button-container {
+      box-sizing: content-box;
+      padding: 8px 16px 40px;
+    }
+
+    .button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 200px;
+      height: 48px;
+      margin: auto;
+      border-radius: 4px;
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 18px;
+      text-align: center;
+      text-decoration: none;
+      color: #ffffff;
+      background-color: #1F84DB;
+      transition: opacity ease 0.3s;
+    }
+
+    .button:hover {
+      opacity: 0.9;
+    }
+
+    .stock {
+      padding: 16px 16px 24px;
+    }
+
+    .stock__title {
+      padding: 8px 0px 16px;
+      font-size: 20px;
+      line-height: 28px;
+      font-weight: 700;
+      color: #212121;
+      text-align: center;
+    }
+
+
+
+    .addition {
+      font-family: Arial, sans-serif;
+      padding: 16px 16px 16px 16px;
+      background-color: #fafafa;
+    }
+
+    .site-sections {
+      margin-top: 8px;
+      border-radius: 8px;
+    }
+
+
+    .site-sections__title {
+      margin-bottom: 8px;
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: bold;
+      color: #212121;
+    }
+
+    .site-sections__lists {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .site-sections__list {
+      list-style: none;
+    }
+
+    .site-sections__list li {
+      padding-bottom: 8px;
+    }
+
+    .site-sections__link {
+      font-size: 14px;
+      line-height: 20px;
+      color: #9e9e9e;
+      transition: opacity ease 0.3s;
+    }
+
+    .site-sections__link:hover {
+      opacity: 0.9;
+    }
+
+    .category {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin-top: 8px;
+      margin-bottom: 4px;
+      padding: 16px;
+      border-radius: 8px;
+    }
+
+    .category__cards {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px 0;
+    }
+
+    .category__card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 85px;
+      text-align: center;
+    }
+
+    .category__img {
+      height: 80px;
+      margin-bottom: 4px;
+      border-radius: 8px;
+      transition: opacity ease 0.3s;
+    }
+
+    .category__img:hover {
+      opacity: 0.9;
+    }
+
+    .category__text {
+      font-size: 12px;
+      line-height: 15px;
+      color: #9e9e9e;
+      transition: opacity ease 0.3s;
+    }
+
+    .category__text:hover {
+      opacity: 0.9;
+    }
+
+    .social-network {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      margin-top: 8px;
+      margin-bottom: 4px;
+      border-radius: 8px;
+    }
+
+    .subscribes {
+      margin-bottom: 8px;
+      font-family: Arial, sans-serif;
+      color: #212121;
+    }
+
+    .subscribes__heading {
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: bold;
+    }
+
+    .subscribes__block {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      gap: 8px
+    }
+
+    .subscribes__card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      max-width: 280px;
+      min-height: 130px;
+    }
+
+    .subscribes__text {
+      padding: 12px 12px 8px 0px;
+      font-size: 14px;
+      line-height: 22px;
+      color: #9e9e9e
+    }
+
+    .subscribes__button {
+      display: block;
+      padding: 8px;
+      height: 40px;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 700;
+      background-color: #1F84DB;
+      border-radius: 4px;
+      text-decoration: none;
+      text-align: center;
+      color: #ffffff;
+      transition: opacity ease 0.3s;
+    }
+
+    .subscribes__button:hover {
+      opacity: 0.9;
+    }
+
+    .social-network__links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .social-network__link {
+      width: 45px;
+      height: 45px;
+      text-decoration: none;
+      border-radius: 100%;
+      transition: opacity ease 0.3s;
+    }
+
+    .social-network__link:hover {
+      opacity: 0.9;
+    }
+
+    .social-network__images {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .social-network__img {
+      width: 132px;
+      height: 40px;
+      text-decoration: none;
+      border-radius: 6px;
+      border: 2px solid #ffffff;
+    }
+
+    .footer {
+      padding: 4px 16px;
+      font-family: Arial, sans-serif;
+      background-color: #FFF5E9;
+    }
+
+    .footer__text {
+      font-size: 12px;
+      line-height: 16px;
+      color: #9e9e9e;
+    }
+
+    .footer__link {
+      color: #9e9e9e;
+    }
+
+
+    .subscribe {
+      padding: 4px 16px;
+      font-family: Arial, sans-serif;
+      background-color: #FFF5E9;
+    }
+
+    .subscribe__text {
+      font-size: 12px;
+      line-height: 16px;
+      color: #212121;
+    }
+
+    .subscribe__link {
+      color: #212121;
+    }
+
+    .table-carousel[controls] .amp-carousel-button {
+      position: absolute;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      visibility: visible;
+    }
+
+    .stock__carousel[controls] .amp-carousel-button-next {
+      position: absolute;
+      top: 105px;
+      border: 3px solid #212121;
+      background-color: #ffffff;
+      background-image: url(https://rassylka.static1-sima-land.com/ftp_rassylka/000032723-1/next.svg);
+      border-radius: 100%;
+      height: 60px;
+      width: 60px;
+    }
+
+    .stock__carousel[controls] .amp-carousel-button-prev {
+      position: absolute;
+      top: 105px;
+      border: 3px solid #212121;
+      background-color: #ffffff;
+      background-image: url(https://rassylka.static1-sima-land.com/ftp_rassylka/000032723-1/prev.svg);
+      border-radius: 100%;
+      height: 60px;
+      width: 60px;
+    }
+
+    .table-carousel[controls] .amp-carousel-button:hover {
+      cursor: pointer;
+    }
+
+    @media screen and (max-width: 599px) {
+      .subscribes__block {
+        flex-direction: column;
+      }
+
+      .subscribes__heading {
+        text-align: center;
+      }
+
+      .subscribes__card {
+        max-width: 450px;
+      }
+
+      .subscribes__button {
+        align-self: center;
+        width: 280px;
+      }
+    }
+
+    @media screen and (max-width: 440px) {
+      .content__heading {
+        font-size: 24px;
+        line-height: 28px;
+      }
+
+      .content__text {
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      .category__cards {
+        align-items: start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  @{ set k1 = sha512(Recipient.Email) } @{ set k2 =
+  sha512(Recipient.Email&"14ed26bc-0d2f-4fd8-8682-357587e2383e")}
+  <amp-state id="state">
+    <script type="application/json">
+      {
+      "image1": 1,
+      "image2": 1,
+      "image3": 1,
+      "image4": 1,
+      "image5": 1,
+      "image6": 1
+      }
+    </script>
+  </amp-state>
+  <div class="body">
+    <div class="body__container">
+      <header class="header">
+        <p class="preheader">
+          Вас приветствует интернет-магазин Сима-ленд
+        </p>
+        <div class="menu">
+          <a href="https://www.sima-land.ru/" target="_blank">
+            <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/template/design2020/gold21.png"
+              width="113" height="45" alt="">
+            </amp-img>
+          </a>
+          <ul class="menu__list">
+            <li>
+              <a class="menu__link" href="https://www.sima-land.ru/offer/" target="_blank">
+                Акции
+              </a>
+            </li>
+            <li>
+              <a class="menu__link" href="https://www.sima-land.ru/sale/igrushki" target="_blank">
+                Скидки
+              </a>
+            </li>
+            <li>
+              <a class="menu__link" href="https://www.sima-land.ru/hit/igrushki" target="_blank">
+                Хиты продаж
+              </a>
+            </li>
+            <li>
+              <a class="menu__link" href="https://www.sima-land.ru/new/igrushki" target="_blank">
+                Новинки
+              </a>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <main class="main">
+        <section class="content">
+          <div class="hidden"
+            [hidden]="[state.image1, state.image2, state.image3, state.image4, state.image5, state.image6].join('') == '222222'">
+            <table align="center" cellpadding="0" cellspacing="0" width="100%">
+              <tr>
+                <td align="left" valign="top" style="border-top-left-radius: 8px;">
+                  <amp-carousel class="table-carousel" controls loop height="138" width="200" type="slides"
+                    style="border-top-left-radius: 8px;" layout="responsive" aria-label="Looping carousel"
+                    on="slideChange:AMP.setState({state:{image1: event.index + 1}})">
+                    <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032723-1/1-1.png" height="138"
+                      width="200" alt="Топ товаров" layout="responsive"></amp-img>
+                    <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032723-1/1-2.png"
+                      layout="responsive" height="138" width="200" alt="Топ товаров"></amp-img>
+                  </amp-carousel>
+                </td>
+                <td align="left" valign="top">
+                  <amp-carousel class="table-carousel" controls loop height="138" width="200" type="slides"
+                    layout="responsive" role="region" aria-label="Looping carousel"
+                    on="slideChange:AMP.setState({state:{image2: event.index + 1}})">
+                    <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032723-1/2-1.png" height="138"
+                      width="200" alt="Топ товаров" layout="responsive"></amp-img>
+                    <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032723-1/2-2.png"
+                      layout="responsive" height="138" width="200" alt="Топ товаров"></amp-img>
+                  </amp-carousel>
+                </td>
+                <td align="left" valign="top">
+                  <amp-carousel class="table-carousel" controls loop height="138" width="200" type="slides"
+                    style="border-top-right-radius: 8px;" layout="responsive" aria-label="Looping carousel"
+                    on="slideChange:AMP.setState({state:{image3: event.index + 1}})">
+                    <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032723-1/3-1.png" height="138"
+                      width="200" alt="Топ товаров" layout="responsive"></amp-img>
+                    <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032723-1/3-2.png"
+                      layout="responsive" height="138" width="200" alt="Топ товаров"></amp-img>
+                  </amp-carousel>
+                </td>
+              </tr>
+              <tr>
+                <td align="left" valign="top">
+                  <amp-carousel class="table-carousel" controls loop height="138" width="200" type="slides"
+                    layout="responsive" role="region" aria-label="Looping carousel"
+                    on="slideChange:AMP.setState({state:{image4: event.index + 1}})">
+                    <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032723-1/4-1.png" height="138"
+                      width="200" alt="Топ товаров" layout="responsive"></amp-img>
+                    <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032723-1/4-2.png"
+                      layout="responsive" height="138" width="200" alt="Топ товаров"></amp-img>
+                  </amp-carousel>
+                </td>
+                <td align="left" valign="top">
+                  <amp-carousel class="table-carousel" controls loop height="138" width="200" type="slides"
+                    layout="responsive" role="region" aria-label="Looping carousel"
+                    on="slideChange:AMP.setState({state:{image5: event.index + 1}})">
+                    <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032723-1/5-1.png" height="138"
+                      width="200" alt="Топ товаров" layout="responsive"></amp-img>
+                    <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032723-1/5-2.png"
+                      layout="responsive" height="138" width="200" alt="Топ товаров"></amp-img>
+                  </amp-carousel>
+                </td>
+                <td align="left" valign="top">
+                  <amp-carousel class="table-carousel" controls loop height="138" width="200" type="slides"
+                    layout="responsive" role="region" aria-label="Looping carousel"
+                    on="slideChange:AMP.setState({state:{image6: event.index + 1}})">
+                    <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032723-1/6-1.png" height="138"
+                      width="200" alt="Топ товаров" layout="responsive"></amp-img>
+                    <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032723-1/6-2.png"
+                      layout="responsive" height="138" width="200" alt="Топ товаров"></amp-img>
+                  </amp-carousel>
+                </td>
+              </tr>
+            </table>
+            <p class="content__heading">
+              Для вас сюрприз
+            </p>
+            <p class="content__text">
+              Он&nbsp;прячется под баннером. Скорее переключайте картинку, чтобы забрать&nbsp;его!
+            </p>
+          </div>
+          <div class="hidden" hidden
+            [hidden]="[state.image1, state.image2, state.image3, state.image4, state.image5, state.image6].join('') != '222222'">
+            <amp-img class="banner" src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032723-1/0000.png"
+              layout="responsive" width="600" height="275" alt="Топ товаров"></amp-img>
+            <p class="content__text min-padding text-left">
+              <b>Только до&nbsp;30&nbsp;ноября</b>* при покупке на&nbsp;сумму от&nbsp;10&nbsp;000 рублей дарим скидку
+              5&nbsp;%** на&nbsp;оптовые цены.
+            </p>
+            <div class="promo">
+              <p class="promo__heading">Промокод</p>
+              <p class="promo__text">simamoroz6</p>
+            </div>
+            <div class="rules">
+              <p class="rules__heading">Чтобы получить скидку:</p>
+              <ol class="rules__list">
+                <li class="rules__li">Выберите товары на&nbsp;сумму от&nbsp;10&nbsp;000 рублей и&nbsp;положите
+                  в&nbsp;корзину.</li>
+                <li class="rules__li">При оформлении заказа введите промокод в&nbsp;специальном поле и&nbsp;нажмите
+                  &laquo;Применить&raquo;. Завершите оформление.</li>
+                <li class="rules__li">В&nbsp;корзине скидка не&nbsp;отобразится. Вы&nbsp;сможете проверить
+                  её&nbsp;в&nbsp;личном кабинете после обработки заказа.</li>
+              </ol>
+              <p class="content__text_warning">
+                <b>Важно! Промокод действует только для клиентов, которые получили его в&nbsp;электронном письме или
+                  уведомлением на&nbsp;телефон.</b>
+              </p>
+              <p class="rules__description">
+                <b>Обратите внимание:</b> если оплатить заказ картой на&nbsp;сайте, со&nbsp;счёта спишется сумма без
+                учёта скидки. Система пересчитает оплату, и&nbsp;лишние средства вернутся вам на&nbsp;карту
+                в&nbsp;течение 3&nbsp;рабочих дней.
+              </p>
+            </div>
+            <div class="button-container">
+              <a href="https://www.sima-land.ru/promo/top-tovary-oktyabrya/" target="_blank" class="button">Перейти к
+                покупкам</a>
+            </div>
+            <div class="divider"></div>
+            <div class="conditions">
+              <div class="conditions__rows">
+                <!-- костыль убрать потом -->
+                <p style="width: 14px;">*</p>
+                <p>До&nbsp;23:59&nbsp;включительно. Время действия акции исчисляется с&nbsp;учётом часового
+                  пояса&nbsp;г.&nbsp;Екатеринбурга (GMT+5).</p>
+              </div>
+              <div class="conditions__rows">
+                <p>**</p>
+                <p>Суммарная скидка на&nbsp;артикул не&nbsp;может превышать 25&nbsp;%. Акция действует на&nbsp;все
+                  товары, кроме товаров с&nbsp;пометками &laquo;Без скидок&raquo; и&nbsp;&laquo;Товар партнёра&raquo;,
+                  суммируется с&nbsp;оптовыми ценами, основной системой скидок и&nbsp;не&nbsp;суммируется с&nbsp;другими
+                  промокодами и&nbsp;акцией &laquo;Скидка за&nbsp;объём&raquo;, а&nbsp;также со&nbsp;спецусловиями.
+                  На&nbsp;часть товаров скидки могут быть ограничены или не&nbsp;распространяться. Подробности можно
+                  уточнить у&nbsp;менеджера</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="content stock">
+          <p class="stock__title">Актуальные акции и&nbsp;предложения</p>
+          <amp-carousel class="stock__carousel" loop controls height="144" layout="fixed-height" type="carousel"
+            aria-label="Looping carousel" role="region">
+            <a href="https://www.sima-land.ru/trademark/ural-lab/?mode=infinite&sort=mean_rating" target="_blank">
+              <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032721/1.png" width="280"
+                height="144" alt="Средства для волос и тела URAL LAB">
+              </amp-img>
+            </a>
+            <a href="https://www.sima-land.ru/promo/etel-novogodnee-nastroenie-na-vashey-kuhne/" target="_blank">
+              <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032721/2.png" width="280"
+                height="144" alt="Новогодний текстиль для кухни «Этель»">
+              </amp-img>
+            </a>
+            <a href="https://www.sima-land.ru/9492893/novogodniy-nabor-bolshoy-podarok-12-knig-plus-2-podarka-pismo-i-pazl-54-elementa/"
+              target="_blank">
+              <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032723-1/3_1.png" width="280"
+                height="144" alt="Новогодний набор БУКВА-ЛЕНД">
+              </amp-img>
+            </a>
+            <a href="https://www.sima-land.ru/simvol-goda/?banner_banner_dust_cover=40521&chpnk=1&mode=infinite&sort=mean_rating"
+              target="_blank">
+              <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032721/4.png" width="280"
+                height="144" alt="Товары с символом 2024 года">
+              </amp-img>
+            </a>
+            <a href="https://www.sima-land.ru/novogodnyaya-odezhda-obuv-i-aksessuary/?mode=infinite&sort=mean_rating"
+              target="_blank">
+              <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032721/5.png" width="280"
+                height="144" alt="Новогодняя одежда и аксессуары">
+              </amp-img>
+            </a>
+            <a href="https://www.sima-land.ru/promo/posuda-k-novomu-godu/?mode=infinite&sort=mean_rating"
+              target="_blank">
+              <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032721/6.png" width="280"
+                height="144" alt="Посуда к Новому году">
+              </amp-img>
+            </a>
+            <a href="https://www.sima-land.ru/dizaynerskoe-osveshchenie/?f=%7B%22trademark%22%3A%5B%2215714%22%2C%2215684%22%5D%7D&is_catalog=1&mode=infinite&sort=mean_rating"
+              target="_blank">
+              <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032721/7.png" width="280"
+                height="144" alt="Светильники BayerLux и RISALUX">
+              </amp-img>
+            </a>
+            <a href="https://www.sima-land.ru/snegouborochnyy-inventar/?mode=infinite&sort=mean_rating" target="_blank">
+              <amp-img src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032721/8.png" width="280"
+                height="144" alt="Снегоуборочный инвентарь">
+              </amp-img>
+            </a>
+          </amp-carousel>
+        </section>
+        <section class="content category">
+          <div class="category__cards">
+            <div class="category__card">
+              <a class="category__img" href="https://www.sima-land.ru/tovary-na-hellouin/" target="_blank">
+                <amp-img width="80" height="80" layout="fixed" alt="Зимние товары"
+                  src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032721/01.png"></amp-img>
+              </a>
+              <a class="category__text" href="https://www.sima-land.ru/tovary-na-hellouin/" target="_blank">
+                Зимние <br> товары
+              </a>
+            </div>
+            <div class="category__card">
+              <a class="category__img" href="https://www.sima-land.ru/kanctovary/" target="_blank">
+                <amp-img width="80" height="80" layout="fixed" alt="Подарочная упаковка"
+                  src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032721/02.png"></amp-img>
+              </a>
+              <a class="category__text" href="https://www.sima-land.ru/kanctovary/" target="_blank">
+                Подарочная<br />упаковка
+              </a>
+            </div>
+            <div class="category__card">
+              <a class="category__img"
+                href="https://www.sima-land.ru/klimaticheskaya-tekhnika/?mode=infinite&per-page=100&sort=-date&subcategory=category_page&viewtype=cards"
+                target="_blank">
+                <amp-img width="80" height="80" layout="fixed" alt="Символ года"
+                  src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032721/03.png"></amp-img>
+              </a>
+              <a class="category__text"
+                href="https://www.sima-land.ru/klimaticheskaya-tekhnika/?mode=infinite&per-page=100&sort=-date&subcategory=category_page&viewtype=cards"
+                target="_blank">
+                Символ<br />года
+              </a>
+            </div>
+          </div>
+          <div class="category__cards">
+            <div class="category__card">
+              <a class="category__img" href="https://www.sima-land.ru/podarochnye-nabory/" target="_blank">
+                <amp-img width="80" height="80" layout="fixed" alt="Подарочные наборы"
+                  src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032721/04.png"></amp-img>
+              </a>
+              <a class="category__text" href="https://www.sima-land.ru/podarochnye-nabory/" target="_blank">
+                Подарочные<br />наборы
+              </a>
+            </div>
+            <div class="category__card">
+              <a class="category__img" href="https://www.sima-land.ru/sad-i-ogorod/" target="_blank">
+                <amp-img width="80" height="80" layout="fixed" alt="Новогодняя иллюминация"
+                  src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032721/05.png"></amp-img>
+              </a>
+              <a class="category__text" href="https://www.sima-land.ru/sad-i-ogorod/" target="_blank">
+                Новогодняя<br />иллюминация
+              </a>
+            </div>
+            <div class="category__card">
+              <a class="category__img" href="https://www.sima-land.ru/zonty/" target="_blank">
+                <amp-img width="80" height="80" layout="fixed" alt="Подарочные продукты"
+                  src="https://rassylka.static1-sima-land.com/ftp_rassylka/000032721/06.png"></amp-img>
+              </a>
+              <a class="category__text" href="https://www.sima-land.ru/zonty/" target="_blank">
+                Подарочные <br> продукты
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="addition site-sections">
+          <h2 class="site-sections__title">Полезные разделы сайта</h2>
+          <div class="site-sections__lists">
+            <ul class="site-sections__list">
+              <li>
+                <a class="site-sections__link" target="_blank" href="https://www.sima-land.ru/info/oplata/">Оплата
+                  заказа</a>
+              </li>
+              <li>
+                <a class="site-sections__link" target="_blank" href="https://www.sima-land.ru/info/delivery/">Условия
+                  доставки</a>
+              </li>
+              <li>
+                <a class="site-sections__link" target="_blank"
+                  href="https://www.sima-land.ru/info/status-zakaza/">Отслеживание
+                  заказа</a>
+              </li>
+              <li>
+                <a class=" site-sections__link" target="_blank"
+                  href="https://www.sima-land.ru/info/poluchenie_tovara/">Получение заказа</a>
+              </li>
+            </ul>
+            <ul class="site-sections__list">
+              <li>
+                <a class="site-sections__link" target="_blank" href="https://www.sima-land.ru/info/dogovor/">Заключение
+                  договора</a>
+              </li>
+              <li>
+                <a class="site-sections__link" target="_blank" href="https://www.sima-land.ru/info/shop/">Поддержка
+                  бизнеса</a>
+              </li>
+              <li>
+                <a class="site-sections__link" target="_blank" href="https://www.sima-land.ru/price/">Прайс-листы</a>
+              </li>
+              <li>
+                <a class="site-sections__link" target="_blank" href="https://www.sima-land.ru/opt/">Оптовые цены</a>
+              </li>
+            </ul>
+            <ul class="site-sections__list">
+              <li>
+                <a class="site-sections__link" target="_blank" href="https://www.sima-land.ru/vdokhnovenie/">Журнал
+                  «Вдохновение»</a>
+              </li>
+              <li>
+                <a class="site-sections__link" target="_blank" href="https://rabota.sima-land.ru/">Вакансии</a>
+              </li>
+              <li>
+                <a class="site-sections__link" target="_blank" href="https://www.sima-land.ru/info/">Помощь
+                  покупателям</a>
+              </li>
+              <li>
+                <a class="site-sections__link" target="_blank"
+                  href="https://www.sima-land.ru/kontakty/managers/">Территориальный менеджер</a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="addition social-network">
+          <div class="subscribes">
+            <p class="subscribes__heading">
+              Управление подписками
+            </p>
+            <div class="subscribes__block">
+              <div class="subscribes__card">
+                <p class="subscribes__text">Вы можете управлять типами рассылок, отключать и включать
+                  нужные.</p>
+                <a class="subscribes__button"
+                  href="https://www.sima-land.ru/cabinet/unsubscribe/?encrypted-new-email=${k1&" |"&k2}"
+                  target="_blank">Выбрать типы рассылок</a>
+              </div>
+              <div class="subscribes__card">
+                <p class="subscribes__text">А ещё — выбрать определённые категории товаров, по которым хотите получать
+                  письма.</p>
+                <a class="subscribes__button"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSdVD9Fg3hiPIjszgEizKq3gClU4iZOLvQNa1eyAc909-G0vJQ/viewform?usp=pp_url&entry.1874963287=${Recipient.Email}"
+                  target="_blank">Выбрать категории рассылок</a>
+              </div>
+            </div>
+          </div>
+          <div class="social-network__links">
+            <a class="social-network__link" href="https://zen.yandex.ru/sima_land" target="_blank">
+              <amp-img width="45" height="45" layout="fixed"
+                src="https://rassylka.static1-sima-land.com/ftp_rassylka/template/social/dzen.png" alt="Дзен"></amp-img>
+            </a>
+            <a class="social-network__link" href="https://vk.com/sima_land/" target="_blank">
+              <amp-img width="45" height="45" layout="fixed"
+                src="https://rassylka.static1-sima-land.com/ftp_rassylka/template/social/vk.png"
+                alt="ВКонтакте"></amp-img>
+            </a>
+            <a class="social-network__link" href="https://www.ok.ru/simaland/" target="_blank">
+              <amp-img width="45" height="45" layout="fixed"
+                src="https://rassylka.static1-sima-land.com/ftp_rassylka/template/social/ok.png"
+                alt="Одноклассники"></amp-img>
+            </a>
+            <a class="social-network__link" href="https://t.me/sima_land/" target="_blank">
+              <amp-img width="45" height="45" layout="fixed"
+                src="https://rassylka.static1-sima-land.com/ftp_rassylka/template/social/tel.png"
+                alt="Telegram"></amp-img>
+            </a>
+            <a class="social-network__link" href="https://www.youtube.com/channel/UCjA859KVI2UGvt2FYwTw8VQ"
+              target="_blank">
+              <amp-img width="45" height="45" layout="fixed"
+                src="https://rassylka.static1-sima-land.com/ftp_rassylka/template/social/utb.png"
+                alt="YouTube"></amp-img>
+            </a>
+          </div>
+          <div class="social-network__images">
+            <a class="social-network__img" href="https://play.google.com/store/apps/details?id=ru.sima_land.spb.market"
+              target="_blank">
+              <amp-img width="132" height="40" layout="fixed"
+                src="https://rassylka.static1-sima-land.com/ftp_rassylka/template/design2020/gp.png"
+                alt="Google Play"></amp-img>
+            </a>
+            <a class="social-network__img" href="https://itunes.apple.com/ru/app/sima-lend/id1057565689?mt=8/"
+              target="_blank">
+              <amp-img width="132" height="40" layout="fixed"
+                src="https://rassylka.static1-sima-land.com/ftp_rassylka/template/design2020/as.png"
+                alt="App store"></amp-img>
+            </a>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <div class="footer">
+          <p class="footer__text">Не открывается письмо? <a class="footer__link" href="${ Message.AccessibilityLink }"
+              target="_blank">Посмотрите его в браузере</a>.</p>
+        </div>
+        <div class="subscribe">
+          <p class="subscribe__text">Вы&nbsp;получили это сообщение, потому что подписаны на&nbsp;тип оповещений
+            &laquo;От&nbsp;персонального менеджера&raquo; на&nbsp;сайте sima-land.ru. @{ set k1 =
+            sha512(Recipient.Email) } @{ set k2 =
+            sha512(Recipient.Email&"14ed26bc-0d2f-4fd8-8682-357587e2383e")} <a class="subscribe__link"
+              href="https://www.sima-land.ru/cabinet/unsubscribe/?encrypted-new-email=${k1&" |"&k2}"
+              target="_blank">Настроить
+              рассылки или отписаться</a>.</p>
+        </div>
+      </footer>
+    </div>
+  </div>
+</body>
+
+</html>

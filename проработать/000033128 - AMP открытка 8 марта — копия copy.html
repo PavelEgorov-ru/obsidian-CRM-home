@@ -1,0 +1,730 @@
+<!doctype html>
+<html ⚡4email data-css-strict lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <script async custom-element="amp-anim" src="https://cdn.ampproject.org/v0/amp-anim-0.1.js"></script>
+  <script custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js" async></script>
+  <style amp4email-boilerplate>
+    body {
+      visibility: hidden
+    }
+  </style>
+  <style amp-custom>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .body {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+      color: #212121;
+      background-color: #f5f5f5;
+    }
+
+    .body__container {
+      max-width: 600px;
+      margin: auto;
+      background-color: #f5f5f5;
+    }
+
+    .preheader {
+      padding: 4px 16px;
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      line-height: 13px;
+      color: #9e9e9e;
+      background-color: #212121;
+    }
+
+    /* блок меню начало */
+    .menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 60px;
+      padding: 16px 16px 16px;
+      font-family: Arial, sans-serif;
+      background-color: #3a3a3b;
+    }
+
+    .menu__list {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      line-height: 20px;
+      list-style: none;
+    }
+
+    .menu__link {
+      text-decoration: none;
+      color: #ffffff;
+    }
+
+    .menu__link:hover {
+      color: #646363;
+    }
+
+    /* блок меню конец */
+    /* блок с контентом начало */
+    .content {
+      margin-top: 8px;
+      font-family: Arial, sans-serif;
+      color: #ffffff;
+      background-color: #000000;
+    }
+
+    .content__text {
+      padding: 4px 16px 4px;
+      margin: 0 auto;
+      font-size: 17px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      color: #ffffff;
+      max-width: 457px;
+    }
+
+    /* карточка с кнопкой начало */
+    .button {
+      /* min-width: 100px; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 8px 20px;
+      margin: 20px 0px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 24px;
+      text-align: center;
+      text-decoration: none;
+      color: #ffffff;
+      background-color: #DEAC62;
+      transition: opacity ease 0.3s;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      opacity: 0.9;
+    }
+
+    .cards {
+      display: flex;
+      margin: 24px 16px 0px;
+      max-width: 568px;
+      justify-content: center;
+      column-gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      display: block;
+      text-decoration: none;
+      transition: opacity ease 0.3s;
+    }
+
+    .card:hover {
+      opacity: 0.9;
+    }
+
+    /* конец карточки с кнопой */
+    /* блок с контентом конец */
+    /* блок ЭТО ИНТЕРЕСНО начало */
+    .content-2 {
+      margin-top: 8px;
+      padding: 24px 0px 40px;
+      font-family: Arial, sans-serif;
+      color: #212121;
+      background-color: #ffffff;
+    }
+
+    .content-2__header {
+      padding-bottom: 16px;
+      font-size: 24px;
+      line-height: 28px;
+      text-align: center;
+    }
+
+    .content-2__cards {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 0 16px;
+    }
+
+    .content-2__card {
+      height: 246px;
+    }
+
+    /* блок с категорией начало */
+    .category {
+      margin-top: 8px;
+      margin-bottom: 4px;
+      padding: 12px 16px 20px 16px;
+      font-family: Arial, sans-serif;
+      background-color: #fafafa
+    }
+
+    .category__cards {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 12px 0;
+    }
+
+    .category__card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      /* max-width: 85px; */
+      text-align: center;
+    }
+
+    .category__img {
+      height: 80px;
+      margin-bottom: 4px;
+      border-radius: 8px;
+      transition: opacity ease 0.3s;
+    }
+
+    .category__img:hover {
+      opacity: 0.9;
+    }
+
+    .category__text {
+      font-size: 12px;
+      line-height: 18px;
+      color: #9e9e9e;
+      transition: opacity ease 0.3s;
+    }
+
+    .category__text:hover {
+      opacity: 0.9;
+    }
+
+    /* блок с категорией конец */
+    /* блок полезные разделы сайта начало */
+    .site-sections {
+      margin-top: 8px;
+    }
+
+    .site-sections {
+      margin-top: 8px;
+      padding: 12px 16px 20px 16px;
+      font-family: Arial, sans-serif;
+      background-color: #fafafa;
+    }
+
+    .site-sections__title {
+      margin-bottom: 8px;
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: bold;
+      color: #212121;
+    }
+
+    .site-sections__lists {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .site-sections__list {
+      list-style: none;
+    }
+
+    .site-sections__list li {
+      padding-bottom: 8px;
+    }
+
+    .site-sections__link {
+      font-size: 14px;
+      line-height: 20px;
+      color: #9e9e9e;
+      transition: opacity ease 0.3s;
+    }
+
+    .site-sections__link:hover {
+      opacity: 0.9;
+    }
+
+    /* блок полезные разделы сайта конец */
+    .social-network {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      margin-top: 8px;
+      margin-bottom: 4px;
+      padding: 20px 16px 20px 16px;
+      font-family: Arial, sans-serif;
+      background-color: #fafafa;
+    }
+
+    .subscribes {
+      margin-bottom: 8px;
+      font-family: Arial, sans-serif;
+      color: #212121;
+    }
+
+    .subscribes__heading {
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: bold;
+    }
+
+    .subscribes__block {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      gap: 8px
+    }
+
+    .subscribes__card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      max-width: 280px;
+      min-height: 130px;
+    }
+
+    .subscribes__text {
+      padding: 12px 12px 8px 0px;
+      font-size: 14px;
+      line-height: 22px;
+      color: #9e9e9e
+    }
+
+    .subscribes__button {
+      display: block;
+      padding: 8px;
+      min-height: 40px;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 700;
+      background-color: #1F84DB;
+      border-radius: 4px;
+      text-decoration: none;
+      text-align: center;
+      color: #ffffff;
+      transition: opacity ease 0.3s;
+    }
+
+    .subscribes__button:hover {
+      opacity: 0.9;
+    }
+
+    .social-network__links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .social-network__link {
+      width: 45px;
+      height: 45px;
+      text-decoration: none;
+      border-radius: 100%;
+      transition: opacity ease 0.3s;
+    }
+
+    .social-network__link:hover {
+      opacity: 0.9;
+    }
+
+    .social-network__images {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .social-network__img {
+      width: 132px;
+      height: 40px;
+      text-decoration: none;
+      border-radius: 6px;
+      border: 2px solid #ffffff;
+    }
+
+    .footer {
+      padding: 12px 16px;
+      font-family: Arial, sans-serif;
+      background-color: #EBEBEB;
+    }
+
+    .footer__text {
+      font-size: 12px;
+      line-height: 16px;
+      color: #9e9e9e;
+    }
+
+    /* .footer__text:last-child { padding-top: 12px; } */
+    .footer__link {
+      color: #9e9e9e;
+    }
+
+    .subscribe {
+      padding: 12px 16px;
+      font-family: Arial, sans-serif;
+      background-color: #3A3A3B;
+    }
+
+    .subscribe__text {
+      font-size: 12px;
+      line-height: 16px;
+      color: #ffffff;
+    }
+
+    .subscribe__link {
+      color: #ffffff;
+    }
+
+    .table-carousel[controls] .amp-carousel-button {
+      position: absolute;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      visibility: visible;
+    }
+
+    .card__carousel[controls] .amp-carousel-button-next {
+      border: 3px solid #212121;
+      border-radius: 8px;
+      height: 40px;
+      width: 40px;
+    }
+
+    .card__carousel[controls] .amp-carousel-button-prev {
+      display: none;
+    }
+
+    .card__carousel[controls] .amp-carousel-button:hover {
+      cursor: pointer;
+    }
+
+    @media screen and (max-width: 599px) {
+      .kit__text {
+        width: 100%;
+        padding: 0px;
+        text-align: center;
+      }
+
+      .subscribes__block {
+        flex-direction: column;
+      }
+
+      .subscribes__heading {
+        text-align: center;
+      }
+
+      .subscribes__card {
+        max-width: 450px;
+      }
+
+      .subscribes__button {
+        align-self: center;
+        width: 280px;
+      }
+    }
+
+    @media screen and (max-width: 440px) {
+      .content__text {
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      .category__cards {
+        align-items: start;
+      }
+    }
+
+    .test {
+      border: 1px solid red
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0px 16px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .rotate {
+      transform: rotate(7000720deg);
+      transition: transform 5000s;
+    }
+
+    .content__box {
+      padding: 20px 0px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .container__rulet {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container__img2 {
+      border-radius: 100%;
+    }
+
+    .container__img3 {
+      position: absolute;
+      border-radius: 100%;
+    }
+
+    .test_4 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      position: relative;
+    }
+
+    .test_5 {
+      padding: 0px 4px;
+    }
+
+    .test__text {
+      font-size: 17px;
+      line-height: 24px;
+      color: #FF90D3;
+      width: 250px;
+      transform: translateY(-20px);
+    }
+
+    .test__text_1 {
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 28px;
+      color: #FF90D3;
+      width: 250px;
+      transform: translateY(-20px);
+    }
+  </style>
+</head>
+
+<body> <amp-state id="state">
+    <script type="application/json"> { "random": 0, "random1": 1, "start": false, "reverse": false } </script>
+  </amp-state>
+  <div class="body">
+    <div class="body__container">
+      <header class="header">
+        <p class="preheader"> Вас приветствует интернет-магазин Сима-ленд </p>
+        <div class="menu"> <a href="https://www.sima-land.ru/" target="_blank"> <amp-img
+              src="https://rassylka.static1-sima-land.com/ftp_rassylka/template/design2020/gold23.png" width="113"
+              height="45" alt=""> </amp-img> </a>
+          <ul class="menu__list">
+            <li> <a class="menu__link" href="https://www.sima-land.ru/offer/" target="_blank"> Акции </a> </li>
+            <li> <a class="menu__link" href="https://www.sima-land.ru/sale/" target="_blank"> Скидки </a> </li>
+            <li> <a class="menu__link" href="https://www.sima-land.ru/hit/" target="_blank"> Хиты продаж </a> </li>
+            <li> <a class="menu__link" href="https://www.sima-land.ru/new/" target="_blank"> Новинки </a> </li>
+          </ul>
+        </div>
+      </header>
+      <main class="main">
+        <section class="content"> <amp-anim class="card__banner"
+            src="https://rassylka.static1-sima-land.com/ftp_rassylka/000033128/0000_1.gif" layout="responsive"
+            width="600" height="324" alt="Товары для интерьера с хорошими отзывами"></amp-anim>
+          <div class="content__box">
+            <p class="content__text"> Дорогие женщины, поздравляем вас с&nbsp;8&nbsp;Марта! Пусть этот праздник
+              и&nbsp;вся жизнь приносят лишь любовь, добро, вдохновение и&nbsp;счастье. Пусть всё будет так, как
+              вы&nbsp;захотите! </p>
+          </div>
+          <div class="test_4">
+            <div class="container"> <amp-img class="container__img1"
+                src="https://rassylka.static1-sima-land.com/ftp_rassylka/000033128/3_1.png" layout="fixed" width="17"
+                height="23" alt="Товары для интерьера с хорошими отзывами"></amp-img>
+              <div class="container__rulet"> <amp-img class="container__img2" id="container__img2"
+                  src="https://rassylka.static1-sima-land.com/ftp_rassylka/000033128/1_1.png" layout="fixed" width="150"
+                  height="150" alt="Товары для интерьера с хорошими отзывами"></amp-img> <amp-img
+                  class="container__img3" id="container__img3" hidden
+                  src="https://rassylka.static1-sima-land.com/ftp_rassylka/000033128/2_1.png" layout="fixed" width="150"
+                  height="150" alt="Товары для интерьера с хорошими отзывами"></amp-img> </div>
+              <div class="buttons">
+                <div class="button" id="run" tabindex=1 role="button"
+                  on="tap: AMP.setState({random: floor(random()*16+1), start: true, reverse: false}), stop.show, run.hide, container__img2.toggleClass(class='rotate', force=true), container__img3.hide">
+                  Крутить </div>
+                <div class="button" hidden id="stop" tabindex=2 role="button"
+                  on="tap:AMP.setState({random1: floor(random()*3+1), start: false, reverse: true}), reverse.show, stop.hide, container__img2.toggleClass(class='rotate', force=false), container__img3.show">
+                  Остановить </div>
+                <div class="button" hidden id="reverse" tabindex=1 role="button"
+                  on="tap: AMP.setState({random: floor(random()*20+1), start: true}), stop.show, reverse.hide, container__img2.toggleClass(class='rotate', force=true), container__img3.hide">
+                  Ещё разок </div>
+              </div>
+            </div>
+            <div class="test_5">
+              <p class="test__text" [hidden]="random == 0 ? false : true"> Мы&nbsp;подготовили сюрприз, чтобы вас
+                порадовать: крутите барабан и&nbsp;получайте комплименты. Можно запускать много раз и&nbsp;наслаждаться
+                другими приятными словами. </p>
+              <p class="test__text" hidden [hidden]="reverse == false && start == true ? false : true"> Если нравится
+                смотреть на&nbsp;крутящийся барабан&nbsp;&mdash; наслаждайтесь! А&nbsp;если хотите увидеть результат,
+                остановите. </p>
+              <p class="test__text" hidden [hidden]="random1 == 1 && start == true ? false : true"> Если нравится
+                смотреть на&nbsp;крутящийся барабан&nbsp;&mdash; наслаждайтесь! А&nbsp;если хотите увидеть результат,
+                остановите. </p>
+              <p class="test__text" hidden [hidden]="random1 == 2 && start == true ? false : true"> Этот барабан может
+                крутиться 83&nbsp;минуты, проверим? </p>
+              <p class="test__text" hidden [hidden]="random1 == 3 && start == true ? false : true"> Бесконечно можно
+                смотреть на&nbsp;3&nbsp;вещи: как мужчина признаётся в&nbsp;любви, как приходят деньги и&nbsp;как
+                крутится барабан ))) </p>
+              <p class="test__text_1" hidden [hidden]="random == 1 && start == false? false : true"> Вы&nbsp;умная,
+                весёлая, добрая и&nbsp;очень красивая!&#127801; </p>
+              <p class="test__text_1" hidden [hidden]="random == 2 && start == false ? false : true"> Вы&nbsp;невероятно
+                сильная, независимая и&nbsp;вообще прекрасная!🌺 </p>
+              <p class="test__text_1" hidden [hidden]="random == 3 && start == false ? false : true"> Вы, несомненно,
+                обаятельная, остроумная и&nbsp;грациозная!🌷 </p>
+              <p class="test__text_1" hidden [hidden]="random == 4 && start == false ? false : true">
+                Вы&nbsp;удивительно трудолюбивая, ответственная и&nbsp;очень честная!🌹 </p>
+              <p class="test__text_1" hidden [hidden]="random == 5 && start == false ? false : true"> Вы&nbsp;искренняя,
+                отзывчивая, щедрая и&nbsp;надёжная!🏵️ </p>
+              <p class="test__text_1" hidden [hidden]="random == 6 && start == false ? false : true">
+                Вы&nbsp;внимательная, тактичная и&nbsp;просто великолепная!💐 </p>
+              <p class="test__text_1" hidden [hidden]="random == 7 && start == false ? false : true"> Вы&nbsp;самая
+                яркая, стильная и&nbsp;уверенная в&nbsp;себе!🥀 </p>
+              <p class="test__text_1" hidden [hidden]="random == 8 && start == false ? false : true"> Вы&nbsp;мудрая,
+                рассудительная и&nbsp;просто замечательная!🌺 </p>
+              <p class="test__text_1" hidden [hidden]="random == 9 && start == false ? false : true"> Вы&nbsp;очень
+                весёлая, жизнерадостная и&nbsp;оптимистичная!🌷 </p>
+              <p class="test__text_1" hidden [hidden]="random == 10 && start == false ? false : true">
+                Вы&nbsp;терпеливая, деликатная и&nbsp;очень понимающая!🌹 </p>
+              <p class="test__text_1" hidden [hidden]="random == 11 && start == false ? false : true"> Вы&nbsp;активная,
+                энергичная и&nbsp;самая целеустремлённая!🌼 </p>
+              <p class="test__text_1" hidden [hidden]="random == 12 && start == false ? false : true">
+                Вы&nbsp;заботливая, очень любящая, преданная и&nbsp;уникальная!🌸 </p>
+              <p class="test__text_1" hidden [hidden]="random == 13 && start == false ? false : true">
+                Вы&nbsp;позитивная, творческая и&nbsp;вообще невероятная!💐 </p>
+              <p class="test__text_1" hidden [hidden]="random == 14 && start == false ? false : true">
+                Вы&nbsp;обаятельная, благородная и&nbsp;просто чудесная!🥀 </p>
+              <p class="test__text_1" hidden [hidden]="random == 15 && start == false ? false : true">
+                Вы&nbsp;элегантная, талантливая и&nbsp;абсолютно невероятная!💐 </p>
+              <p class="test__text_1" hidden [hidden]="random == 16 && start == false ? false : true">
+                Вы&nbsp;заботливая, нежная, красивая и&nbsp;самая чудесная!🌼 </p>
+              <p class="test__text_1" hidden [hidden]="random == 17 && start == false ? false : true"> Вы&nbsp;умная,
+                мягкая и&nbsp;просто невероятная!🌷 </p>
+              <p class="test__text_1" hidden [hidden]="random == 18 && start == false ? false : true">
+                Вы&nbsp;отзывчивая, а&nbsp;ещё заботливая и&nbsp;открытая, в&nbsp;общем, восхитительная!🌺 </p>
+              <p class="test__text_1" hidden [hidden]="random == 19 && start == false ? false : true">
+                Вы&nbsp;остроумная, креативная и&nbsp;неповторимо притягательная!🌼 </p>
+              <p class="test__text_1" hidden [hidden]="random == 20 && start == false ? false : true"> Вы&nbsp;всегда
+                открытая, позитивная, яркая и&nbsp;внимательная!🥀 </p>
+            </div>
+          </div> <amp-anim class="card__banner"
+            src="https://rassylka.static1-sima-land.com/ftp_rassylka/000033128/1111_1.gif" layout="responsive"
+            width="600" height="180" alt="Товары для интерьера с хорошими отзывами"></amp-anim>
+        </section>
+        <section class="site-sections">
+          <h2 class="site-sections__title">Полезные разделы сайта</h2>
+          <div class="site-sections__lists">
+            <ul class="site-sections__list">
+              <li> <a class="site-sections__link" target="_blank" href="https://www.sima-land.ru/info/oplata/">Оплата
+                  заказа</a> </li>
+              <li> <a class="site-sections__link" target="_blank" href="https://www.sima-land.ru/info/delivery/">Условия
+                  доставки</a> </li>
+              <li> <a class="site-sections__link" target="_blank"
+                  href="https://www.sima-land.ru/info/status-zakaza/">Отслеживание заказа</a> </li>
+              <li> <a class=" site-sections__link" target="_blank"
+                  href="https://www.sima-land.ru/info/poluchenie_tovara/">Получение заказа</a> </li>
+            </ul>
+            <ul class="site-sections__list">
+              <li> <a class="site-sections__link" target="_blank"
+                  href="https://www.sima-land.ru/info/dogovor/">Заключение договора</a> </li>
+              <li> <a class="site-sections__link" target="_blank" href="https://www.sima-land.ru/info/shop/">Поддержка
+                  бизнеса</a> </li>
+              <li> <a class="site-sections__link" target="_blank" href="https://www.sima-land.ru/price/">Прайс-листы</a>
+              </li>
+              <li> <a class="site-sections__link" target="_blank" href="https://www.sima-land.ru/opt/">Оптовые цены</a>
+              </li>
+            </ul>
+            <ul class="site-sections__list">
+              <li> <a class="site-sections__link" target="_blank" href="https://www.sima-land.ru/vdokhnovenie/">Журнал
+                  «Вдохновение»</a> </li>
+              <li> <a class="site-sections__link" target="_blank" href="https://rabota.sima-land.ru/">Вакансии</a> </li>
+              <li> <a class="site-sections__link" target="_blank" href="https://www.sima-land.ru/info/">Помощь
+                  покупателям</a> </li>
+              <li> <a class="site-sections__link" target="_blank"
+                  href="https://www.sima-land.ru/kontakty/managers/">Территориальный менеджер</a> </li>
+            </ul>
+          </div>
+        </section>
+        <section class="social-network">
+          <div class="social-network__links"> <a class="social-network__link" href="https://zen.yandex.ru/sima_land"
+              target="_blank"> <amp-img width="45" height="45" layout="fixed"
+                src="https://rassylka.static1-sima-land.com/ftp_rassylka/template/social/dzen.png" alt="Дзен"></amp-img>
+            </a> <a class="social-network__link" href="https://vk.com/sima_land/" target="_blank"> <amp-img width="45"
+                height="45" layout="fixed"
+                src="https://rassylka.static1-sima-land.com/ftp_rassylka/template/social/vk.png"
+                alt="ВКонтакте"></amp-img> </a> <a class="social-network__link" href="https://www.ok.ru/simaland/"
+              target="_blank"> <amp-img width="45" height="45" layout="fixed"
+                src="https://rassylka.static1-sima-land.com/ftp_rassylka/template/social/ok.png"
+                alt="Одноклассники"></amp-img> </a> <a class="social-network__link" href="https://t.me/sima_land/"
+              target="_blank"> <amp-img width="45" height="45" layout="fixed"
+                src="https://rassylka.static1-sima-land.com/ftp_rassylka/template/social/tel.png"
+                alt="Telegram"></amp-img> </a> <a class="social-network__link"
+              href="https://www.youtube.com/channel/UCjA859KVI2UGvt2FYwTw8VQ" target="_blank"> <amp-img width="45"
+                height="45" layout="fixed"
+                src="https://rassylka.static1-sima-land.com/ftp_rassylka/template/social/utb.png"
+                alt="YouTube"></amp-img> </a> </div>
+          <div class="social-network__images"> <a class="social-network__img"
+              href="https://play.google.com/store/apps/details?id=ru.sima_land.spb.market" target="_blank"> <amp-img
+                width="132" height="40" layout="fixed"
+                src="https://rassylka.static1-sima-land.com/ftp_rassylka/template/design2020/gp.png"
+                alt="Google Play"></amp-img> </a> <a class="social-network__img"
+              href="https://itunes.apple.com/ru/app/sima-lend/id1057565689?mt=8/" target="_blank"> <amp-img width="132"
+                height="40" layout="fixed"
+                src="https://rassylka.static1-sima-land.com/ftp_rassylka/template/design2020/as.png"
+                alt="App store"></amp-img> </a> </div>
+        </section>
+      </main>
+      <footer>
+        <div class="footer">
+          <p class="footer__text">Не открывается письмо? <a class="footer__link" href="${ Message.AccessibilityLink }"
+              target="_blank">Посмотрите его в браузере</a>.</p>
+        </div>
+        <div class="subscribe"> @{ set k1 = sha512(Recipient.Email) } @{ set k2 =
+          sha512(Recipient.Email&"14ed26bc-0d2f-4fd8-8682-357587e2383e")} <p class="subscribe__text">Вы получили это
+            сообщение, потому что подписаны на рассылку на сайте <a class="subscribe__link"
+              href="https://www.sima-land.ru/cabinet/unsubscribe/?encrypted-new-email=${k1&" |"&k2}"
+              target="_blank">Настроить рассылки или отписаться</a>. </p>
+        </div>
+      </footer>
+    </div>
+  </div>
+</body>
+
+</html>
