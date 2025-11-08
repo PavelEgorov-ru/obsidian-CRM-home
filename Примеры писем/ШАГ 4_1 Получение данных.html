@@ -1,0 +1,39 @@
+<!doctype html>
+<html ⚡4email data-css-strict lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
+  <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+  <style amp4email-boilerplate>
+    body {
+      visibility: hidden
+    }
+  </style>
+  <style amp-custom>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    amp-list div[role='list'] {
+      display: grid;
+      gap: 0.5em;
+    }
+  </style>
+</head>
+
+<body>
+  <amp-list width="auto" height="100" layout="fixed-height" template="test" binding="no"
+    src="https://bb2345d0-046d-4c01-85b3-d039e8734cd9.mock.pstmn.io/test">
+  </amp-list>
+  <template type="amp-mustache" id="test">
+    <div class="url-entry">
+      <a href="{{url}}">{{title}}</a>
+    </div>
+  </template>
+</body>
+
+</html>
