@@ -1,0 +1,141 @@
+<!doctype html>
+<html ⚡4email data-css-strict lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+  <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+  <style amp4email-boilerplate>
+    body {
+      visibility: hidden
+    }
+  </style>
+  <style amp-custom>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      margin: auto;
+      width: 184px;
+      height: 290px;
+      border: 1px solid black;
+      border-radius: 8px;
+    }
+
+    .form__body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+    }
+
+    .form__buttons {
+      display: flex;
+      justify-content: space-around;
+      gap: 4px;
+      /* margin-bottom: 4px; */
+    }
+
+    .form__buttons_error {
+      width: 50%;
+      height: 140px;
+      padding: 10px 8px;
+      font-size: 14px;
+      line-height: 18px;
+      text-align: center;
+      background-color: rgb(230, 109, 53);
+      color: #212121;
+      border-radius: 4px;
+    }
+
+    .form__buttons_success {
+      width: 50%;
+      height: 140px;
+      padding: 10px 8px;
+      font-size: 14px;
+      line-height: 18px;
+      text-align: center;
+      background-color: #09ab8b;
+      color: #212121;
+      border-radius: 4px;
+    }
+
+    button {
+      width: 88px;
+      padding: 8px 8px;
+      font-size: 14px;
+      line-height: 18px;
+      background-color: #9e9e9e;
+      color: #ffffff;
+      border: 0px solid #ffffff;
+      border-radius: 4px;
+    }
+
+    .form__counts {
+      width: 88px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .form__name {
+      margin: 0;
+      padding: 0px 8px;
+      height: 32px;
+      font-size: 14px;
+      line-height: 18px;
+      text-align: center;
+      text-overflow: ellipsis;
+      width: 184px;
+      color: #212121;
+    }
+
+    .form__price {
+      color: #212121
+    }
+  </style>
+</head>
+
+<body>
+  <form method="post" action-xhr="https://bb2345d0-046d-4c01-85b3-d039e8734cd9.mock.pstmn.io/form">
+    <fieldset class="form">
+      <div class="form__body">
+        <label>
+          <span>email:</span>
+          <input type="text" name="email" required>
+        </label>
+        <label>
+          <span>name:</span>
+          <input type="text" name="name" required>
+        </label>
+      </div>
+      <div class="form__buttons">
+        <button type="submit">
+          Отправить
+        </button>
+      </div>
+    </fieldset>
+    <div submit-success class="form__buttons_success">
+      <template type="amp-mustache">
+        <p>почта - {{email}}</p>
+        <p>имя - {{name}}</p>
+      </template>
+    </div>
+    <div submit-error class="form__buttons_error">
+      <template type="amp-mustache">
+        <p>в этот раз нет ответа</p>
+      </template>
+    </div>
+  </form>
+</body>
+
+</html>
